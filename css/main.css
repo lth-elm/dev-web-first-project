@@ -1,0 +1,27 @@
+html {
+    font-family: Arial, Helvetica, Verdana, sans serif;
+}
+
+body {
+    padding: 1em;
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #333;
+    color: #efefef;
+    left: 0;
+    right: 0;
+    padding: 1em;
+}
+
+.main {
+    margin-bottom: 3em;
+}
+
+.main-header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
