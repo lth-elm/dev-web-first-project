@@ -1,12 +1,23 @@
-.main {
-    width: 1200px;
-    margin: auto;
+html {
+    font-family : 'Baloo Tammudu 2', cursive, Calibri, Arial, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #ffd59e;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .main-header {
-    background-color: #363636;
+    background-color: #202020;
     color: #ffffff;
     padding-bottom: 1px;
+    box-shadow: 0px 1px 15px black;
 }
 
 #main-title {
@@ -17,12 +28,27 @@
 #logo {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
+}
+
+#logo-text {
+    font-family: 'Bad Script', cursive;
+}
+
+#sign-in a {
+    margin-right: 60px;
+    color: #6fffdb;
+    text-decoration: none;  
+}
+
+#sign-in a:hover {
+    color: #ffd59e;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
+    justify-content: center;
 }
 
 nav li {
@@ -35,32 +61,103 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffe96f;
+    color: #ffd59e;
 }
 
 #theme {
+    padding-top: 10px;
     display: flex;
     justify-content: center;
+    font-family: 'Bad Script', cursive;
+}
+
+
+
+main {
+    width: 1200px;
+    margin: auto;
+}
+
+.main {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+article, aside {
+    text-align: justify;
+}
+
+article {
+    margin-right: 40px;
+    flex: 3;
+}
+
+aside {
+    border-left: 1px solid black;
+    margin-top: 90px;
+    flex: 1;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside h1 {
+    margin-bottom: 50px;
+}
+
+aside a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside a {
+    color: #00008b;
+    text-decoration: none;
+}
+
+aside a p:hover {
+    font-weight: bold;
 }
 
 
 
 footer {
     padding-top: 10px;
-    background-color: #363636;
+    padding-bottom: 10px;
+    background-color: #202020;
     color: #ffffff;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    font-family: 'Bad Script', cursive;
 }
 
 #us {
+    margin-left: 40px;
     display: flex;
     flex-direction: row;
+}
+
+#us img {
+    margin-right: 20px;
+    border-radius: 50%;
 }
 
 #lien-github a {
     color: #6fffdb;
     text-decoration: none;
+}
+
+#lien-github a:hover {
+    color: #ffd59e;
+}
+
+
+#lien-github a i {
+    margin-right: 40px;
+    margin-left: 10px;
 }
