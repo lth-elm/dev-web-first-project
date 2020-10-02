@@ -64,14 +64,42 @@ nav a:hover {
     color: #ffd59e;
 }
 
+
+.drop {
+    list-style-type: none;
+    margin: 0em;
+    padding: 0em;
+    position: absolute;
+    display: none;
+}
+
+.drop >li >a {
+    text-align: center;
+    color:white;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    font-size: medium;
+    background-color: #686868;
+}
+
+.drop >li > a:hover {
+    background-color: lavender;
+    color: #686868;
+}
+
+nav >ul >li:hover .drop {
+    display: block;
+}
+
+
+
 #theme {
     padding-top: 10px;
     display: flex;
     justify-content: center;
     font-family: 'Bad Script', cursive;
 }
-
-
 
 main {
     width: 1200px;
