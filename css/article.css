@@ -21,6 +21,11 @@
     line-height: 30px;
 }
 
+#Ibox >ul >li >a {
+    color: #00008b;
+}
+
+
 #Ibox >ul >li:hover {
     background-color: rgb(219, 217, 217);
     /*font-weight: bold;*/
