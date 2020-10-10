@@ -1,0 +1,55 @@
+/* NAVIGATION ASIDE */
+
+#Ibox {
+    margin-bottom: 25px;
+}
+
+#Ibox h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#Ibox > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+}
+
+#Ibox >ul >li {
+    line-height: 30px;
+}
+
+#Ibox >ul >li:hover {
+    background-color: rgb(219, 217, 217);
+    /*font-weight: bold;*/
+}
+
+#Ibox >ul >li >a:link {
+    color: black;
+}
+
+
+/* OPERATION */
+
+.tableau {
+    width:"60%";
+}
+
+.op {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+

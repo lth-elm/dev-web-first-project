@@ -6,6 +6,9 @@ body {
     background-color: #ffd59e;
 }
 
+
+/* HEADER */
+
 header {
     display: flex;
     flex-direction: row;
@@ -34,6 +37,9 @@ header {
 #logo-text {
     font-family: 'Bad Script', cursive;
 }
+
+
+/* SIGN-IN and NAV */
 
 #sign-in a {
     margin-right: 60px;
@@ -65,6 +71,8 @@ nav a:hover {
 }
 
 
+/* DROP */
+
 .drop {
     list-style-type: none;
     margin: 0em;
@@ -93,6 +101,7 @@ nav >ul >li:hover .drop {
 }
 
 
+/* MAIN and ARTICLE */
 
 #theme {
     padding-top: 10px;
@@ -120,11 +129,17 @@ article {
     flex: 3;
 }
 
+article h1 {
+    font-size: 2.5em;
+}
+
+
+/* ASIDE */
+
 aside {
     border-left: 1px solid black;
     margin-top: 90px;
     flex: 1;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,9 +147,11 @@ aside {
 
 aside h1 {
     margin-bottom: 50px;
+    font-size: 1.75em;
 }
 
 aside a {
+    line-height: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -150,8 +167,10 @@ aside a p:hover {
 }
 
 
+/* FOOTER */
 
 footer {
+    margin-top: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #202020;
@@ -189,3 +208,6 @@ footer {
     margin-right: 40px;
     margin-left: 10px;
 }
+
+
+

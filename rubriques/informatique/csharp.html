@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/article.css">
 </head>
 
 <body>
@@ -59,18 +60,217 @@
         <h1 id="theme" style="font-size: 3em;">Informatique</h1>
         <div class="main">
             <article>
-                <h1 style="font-size: 2.5em;">Le C#</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sagittis massa. Nulla facilisi. Cras id arcu lorem, et semper purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vel enim mi, in lobortis sem. Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis. Nulla imperdiet mauris sed sapien dignissim id aliquam est aliquam. Maecenas non odio ipsum, a elementum nisi. Mauris non erat eu erat placerat convallis. Mauris in pretium urna. Cras laoreet molestie odio, consequat consequat velit commodo eu. Integer vitae lectus ac nunc posuere pellentesque non at eros. Suspendisse non lectus lorem.</p>
-                <p>Vivamus sed libero nec mauris pulvinar facilisis ut non sem. Quisque mollis ullamcorper diam vel faucibus. Vestibulum sollicitudin facilisis feugiat. Nulla euismod sodales hendrerit. Donec quis orci arcu. Vivamus fermentum magna a erat ullamcorper dignissim pretium nunc aliquam. Aenean pulvinar condimentum enim a dignissim. Vivamus sit amet lectus at ante adipiscing adipiscing eget vitae felis. In at fringilla est. Cras id velit ut magna rutrum commodo. Etiam ut scelerisque purus. Duis risus elit, venenatis vel rutrum in, imperdiet in quam. Sed vestibulum, libero ut bibendum consectetur, eros ipsum ultrices nisl, in rutrum diam augue non tortor. Fusce nec massa et risus dapibus aliquam vitae nec diam.</p>
-                <p>Phasellus ligula massa, congue ac vulputate non, dignissim at augue. Sed auctor fringilla quam quis porttitor. Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas consectetur euismod urna. In hac habitasse platea dictumst. Quisque tincidunt porttitor vestibulum. Ut iaculis, lacus at molestie lacinia, ipsum mi adipiscing ligula, vel mollis sem risus eu lectus. Nunc elit quam, rutrum ut dignissim sit amet, egestas at sem.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sagittis massa. Nulla facilisi. Cras id arcu lorem, et semper purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vel enim mi, in lobortis sem. Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis. Nulla imperdiet mauris sed sapien dignissim id aliquam est aliquam. Maecenas non odio ipsum, a elementum nisi. Mauris non erat eu erat placerat convallis. Mauris in pretium urna. Cras laoreet molestie odio, consequat consequat velit commodo eu. Integer vitae lectus ac nunc posuere pellentesque non at eros. Suspendisse non lectus lorem.</p>
+                <h1>Le C#</h1>
+
+                <p>C# est un langage de programmation orientée objet, 
+                fortement typé, dérivé de C et de C++, ressemblant au langage Java3.
+                Il est utilisé pour développer des applications web, ainsi que des applications de bureau,
+                des services web, des commandes, des widgets ou des bibliothèques de classes3. En C#, 
+                une application est un lot de classes où une des classes comporte une méthode Main, comme cela se fait 
+                en Java3.</p>
+                
+                <br>
+                <div id="Type">
+                    <h2><a id="Types">Type</a></h2>
+                    <div class="ZoneTexte">
+                        <ul><p><strong>Qu’est ce qu’un Type ?</strong></p>
+                        <li>Le type détermine la place mémoire occupée par la variable.</li>
+                            <li>Le type détermine les valeurs possibles/acceptables qui pourront être stockées (une à la fois!) dans la variable.</li>
+                            </ul>
+                        <ul><p><strong>Les Types Possibles</strong></p>                            
+                            <li>Les Entiers : <strong>Byte</strong> (1octet), <strong>short</strong> (2 octets), <strong>int</strong> (4 octets), <strong>long</strong> (8 octets).</li>
+                            <li>Les Réels : <strong>float</strong>, simple précision (32 bits)  <strong>double</strong> double précision (64 bits).</li>
+                            <li>Les booléens : <strong>bool</strong> (True False).</li>
+                            <li>Les caractères : <strong>char</strong>, la valeur d’un caractère doit être placée entre deux simples quote (’).</li>
+                            <li>Chaîne de caractères : <strong>string</strong>, est un ensemble de caractères placé entre double quote (").</li>
+                        </ul>       
+                    </div>
+                </div>
+            
+                <br>
+                <div>
+                    <h2><a id="Operations">Les Opérations</a></h2>
+                    <table class="tableau" border="1" bordercolor="red" cellspacing="2" cellpadding="2">
+                        <tr>
+                            <td>Fonction</td>
+                            <td>Symbole</td>
+                        </tr>
+                        <tr><td class="op" colspan="2">Arithmétiques</td></tr>
+                        <tr>
+                            <td>Addition (utile aussi pour la concaténation de chaine de caractères)</td>
+                            <td class="op">+</td>
+                        </tr>
+                        <tr>
+                            <td>Soustraction</td>
+                            <td class="op">-</td>
+                        </tr>
+                        <tr>
+                            <td>Multiplication</td>
+                            <td class="op">*</td>
+                        </tr>
+                        <tr>
+                            <td>Division </td>
+                            <td class="op">/</td>
+                        </tr>
+                        <tr>
+                            <td>Modulo (reste de la division entière)</td>
+                            <td class="op">%</td>
+                        </tr>
+                        <tr><td class="op" colspan="2">Affectation</td></tr>
+                        <tr>
+                            <td>Affectation</td>
+                            <td class="op">=</td>
+                        </tr>
+                        <tr>
+                            <td>Addition puis affectation </td>
+                            <td class="op">+=</td>
+                        </tr>
+                        <tr>
+                            <td>Soustraction puis affectation </td>
+                            <td class="op">-=</td>
+                        </tr>
+                        <tr>
+                            <td>Multiplication puis affectation</td>
+                            <td class="op">*= </td>
+                        </tr>
+                        <tr>
+                            <td>Division puis affectation </td>
+                            <td class="op">/=</td>
+                        </tr>
+                        <tr>
+                            <td>Modulo puis affectation </td>
+                            <td class="op">%=</td>
+                        </tr>
+                        <tr>
+                            <td>Incrémentation de 1</td>
+                            <td class="op">++</td>
+                        </tr>
+                        <tr>
+                            <td>Décrémentation de 1</td>
+                            <td class="op">--</td>
+                        </tr>
+                        <tr><td class="op" colspan="2">Comparaison</td></tr>
+                        <tr>
+                            <td>Égalite</td>
+                            <td class="op">==</td>
+                        </tr>
+                        <tr>
+                            <td>Non égalité (différence) </td>
+                            <td class="op">!=</td>
+                        </tr>
+                        <tr>
+                            <td>Inférieur strictement</td>
+                            <td class="op">&lt</td>
+                        </tr>
+                        <tr>
+                            <td>Inférieur ou égal</td>
+                            <td class="op">&lt=</td>
+                        </tr>
+                        <tr>
+                            <td>Supérieur strictement</td>
+                            <td class="op">&gt</td>
+                        </tr>
+                        <tr>
+                            <td>Supérieur ou égal</td>
+                            <td class="op">&gt=</td>
+                        </tr>
+                        <tr><td class="op" colspan="2">Logiques</td></tr>
+                        <tr>
+                            <td>ET logique</td>
+                            <td class="op">&&</td>
+                        </tr>
+                        <tr>
+                            <td>OU logique</td>
+                            <td class="op">||
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>NON logique</td>
+                            <td class="op">!</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <br><br>
+
+                <div class="conditionnelles">
+                    <h2><a id="Conditionnelles">Les Structures conditionnelles</a></h2>
+                    <div class="structures">
+                        <ul><p>Il existe 2 types de structures conditionnelles :</p>
+                            <li>La classique : <strong>if</strong> (si), <strong>else if</strong> (sinon si), <strong>else</strong> (sinon).</li>
+                                <li>Choix multiple : S’il y a plus de deux choix possibles, l’instruction selon <strong>switch</strong> permet une facilité
+                                    l’écriture plutôt qu’une série de if imbriqués.</li>
+                                </ul>
+                        <img class="photo" src="/images/switch.png" alt="switch">
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="conditionnelles">
+                    <h2><a id="Repetitives">Les Structures répétitives</a></h2>
+                    <div class="structures">
+                        <ul><p>Elles permettent une exécution répétitive(boucle) et cessent lorsqu’une condition de test n’est plus vérifiée!<br>
+                                Il existe deux familles de structures de répétitions :</p>
+                            <li>Itérative : <strong>for</strong> (pour)</li>
+                                <li>Evénementielle :  <strong>while</strong> (Tant que), <strong>do ... while</strong> (Faire ... Tant que).</li>
+                                </ul>
+                        <img src="/images/dowhile.png" alt="do/while">
+                    </div>
+                </div>
+
+                <br><br>
+                
             </article>
+            
             <aside>
-                <h1 style="font-size: 1.75em;">Ressources utilisés</h1>
-                <a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal"><img src="/images/logo-wikipedia.png" width="50" height="50" alt="Logo de Wikipedia" /><p>Lien vers la ressource de wikipedia</p></a>
-                <a href="https://cryptoast.fr/"><img src="/images/logo-cryptoast.png" width="50" height="50" alt="Logo de Cryptoast" /><p>Lien vers la ressource de Cryptoast</p></a>
+                <div id="Ibox">
+                    <h1>Navigation</h1>
+                    <ul>
+                        <li><a href="#Types">Type</a></li>
+                        <li><a href="#Operations">Les Opérations</a></li>
+                        <li><a href="#Conditionnelles">Les Structures conditionnelles</a></li>
+                        <li><a href="#Repetitives">Les Structures répétitives</a></li>
+                        <li><a href="#Loin">Pour aller plus loin</a></li>
+                        <li><a href="#Feedback">FeedBack</a></li>
+                    </ul>
+                </div>
+
+                <h1>Ressources utilisés</h1>
+                <a href="https://openclassrooms.com/fr/courses/1526901-apprenez-a-developper-en-c" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/fr/0/0d/Logo_OpenClassrooms.png" width="50" height="50" alt="Logo OpenClassrooms" /><p>C# OpenClassroom</p></a>
             </aside>
-        </div>     
+        </div> 
+        
+
+        <div>
+            <h2><a id="Loin">Pour aller plus loin</a></h2>
+            <p>Je vous propose ce site internet pour continuer à apprendre le C#</p>
+            <a href="https://openclassrooms.com/fr/courses/1526901-apprenez-a-developper-en-c" target="_blank"><img src="https://consent.trustarc.com/get?name=oc_logo.png" width="417" height="50" alt="Logo OpenClassrooms" /></a>
+        </div>
+
+        <br><br>
+
+        <div>
+            <h2><a id="Feedback">FeedBack</a></h2>
+            <form class="FeedBack" action="">
+                <fieldset>
+                    <label for="title"> 
+                        Titre : 
+                    </label>
+                    <input autofocus type="text" name='title' id="title" placeholder="    Titre    "  ><br><br>
+                    <textarea
+                    placeholder=" 
+                      ici votre FeedBack"
+                    name="comment"
+                    cols="100"
+                    rows="10"
+                    ></textarea>
+                    <input type="submit" value="Send">
+                </fieldset>
+               </form>
+        </div>
+
+
     </main>
     
     <footer class="main-footer">
@@ -79,7 +279,7 @@
             <p>Première manipulation en développement web du jeune kakashi hatake</p>
         </div>
         <div id="lien-github">
-            <a href="https://github.com/lth-elm/dev-web-first-project">Lien vers le code GitHub <i class="fab fa-github fa-2x"></i></a>
+            <a href="https://github.com/lth-elm/dev-web-first-project" target="_blank">Lien vers le code GitHub <i class="fab fa-github fa-2x"></i></a>
         </div>
     </footer>
 
