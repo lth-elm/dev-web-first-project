@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Csharp from '../views/Csharp.vue'
 
 const routes = [
   {
@@ -10,7 +11,7 @@ const routes = [
   {
     path: '/csharp',
     name: 'Csharp',
-    component : Csharp
+    component: Csharp
   }
 ]
 

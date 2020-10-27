@@ -17,12 +17,11 @@
                 <a href="https://cryptoast.fr/" target="_blank"><img src="https://cryptoast.fr/wp-content/uploads/2020/04/logo-cryptoast-450px.png" width="50" height="50" alt="Logo de Cryptoast" /><p>Cryptoast</p></a>
                 <a href="https://openclassrooms.com/fr/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/fr/0/0d/Logo_OpenClassrooms.png" width="50" height="50" alt="Logo OpenClassrooms" /><p>OpenClassroom</p></a>
             </aside>
-        </div>     
+        </div>
     </main>
-    
     <footer class="main-footer">
         <div id="us">
-            <img src="/images/kakashi-avatar.jpg" width="50" height="50" alt="Avatar Kakashi" />
+            <img src="@/assets/images/kakashi-avatar.jpg" width="50" height="50" alt="Avatar Kakashi" />
             <p>Première manipulation en développement web du jeune kakashi hatake</p>
         </div>
         <div id="lien-github">
@@ -39,8 +38,3 @@ export default {
   }
 }
 </script>
-
-
-<style>
-
-</style>
