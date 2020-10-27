@@ -1,65 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-
-<body>
-    <div class="main-header">
-        <header>
-            <div id="main-title">
-                <div id="logo">
-                    <img src="/images/logo-quickscience-white.png" width="100" height="100" alt="Logo QuickScience" />
-                    <div id="logo-text">
-                        <h1>QuickScience</h1> 
-                        <h2 style="font-size: 1em;">Le résumé des news scientifiques à connaitre !</h2>  
-                    </div>             
-                </div>    
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/index.html"><i class="fas fa-home"></i></a></li>
-                    <li><a href="#">Informatique <i class="fas fa-sort-down"></i></a>
-                        <ul class="drop">
-                            <li><a href="#">Python</a></li>
-                            <li><a href="/rubriques/informatique/csharp.html">C#</a></li>
-                            <li><a href="#">Html</a></li>
-                          </ul>
-                    </li>
-                    <li><a href="#">Finance <i class="fas fa-sort-down"></i></a>
-                        <ul class="drop">
-                            <li><a href="#">Marché financier</a></li>
-                            <li><a href="#">Cryptomonnaie</a></li>
-                          </ul>
-                    </li>
-                    <li><a href="#">Physique <i class="fas fa-sort-down"></i></a>
-                        <ul class="drop">
-                            <li><a href="#">Physique 1</a></li>
-                            <li><a href="#">Physique 2</a></li>
-                          </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div id="sign-in">
-                <a href="" >Sign In <i class="fas fa-sign-in-alt"></i></a>
-            </div>
-        </header>
-    </div>
-    
+<template>
+  <div class="home">
     <main>
-        <h1 id="theme" style="font-size: 3em;">Thème</h1>
+        <h1 id="theme" style="font-size: 3em;">Home</h1>
         <div class="main">
             <article>
                 <h1>Titre de l'article</h1>
+                <p style="color: red;"><em>Seul la page ./informatique/csharp.html est complète.</em></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sagittis massa. Nulla facilisi. Cras id arcu lorem, et semper purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vel enim mi, in lobortis sem. Vestibulum luctus elit eu libero ultrices id fermentum sem sagittis. Nulla imperdiet mauris sed sapien dignissim id aliquam est aliquam. Maecenas non odio ipsum, a elementum nisi. Mauris non erat eu erat placerat convallis. Mauris in pretium urna. Cras laoreet molestie odio, consequat consequat velit commodo eu. Integer vitae lectus ac nunc posuere pellentesque non at eros. Suspendisse non lectus lorem.</p>
                 <p>Vivamus sed libero nec mauris pulvinar facilisis ut non sem. Quisque mollis ullamcorper diam vel faucibus. Vestibulum sollicitudin facilisis feugiat. Nulla euismod sodales hendrerit. Donec quis orci arcu. Vivamus fermentum magna a erat ullamcorper dignissim pretium nunc aliquam. Aenean pulvinar condimentum enim a dignissim. Vivamus sit amet lectus at ante adipiscing adipiscing eget vitae felis. In at fringilla est. Cras id velit ut magna rutrum commodo. Etiam ut scelerisque purus. Duis risus elit, venenatis vel rutrum in, imperdiet in quam. Sed vestibulum, libero ut bibendum consectetur, eros ipsum ultrices nisl, in rutrum diam augue non tortor. Fusce nec massa et risus dapibus aliquam vitae nec diam.</p>
                 <p>Phasellus ligula massa, congue ac vulputate non, dignissim at augue. Sed auctor fringilla quam quis porttitor. Praesent vitae dignissim magna. Pellentesque quis sem purus, vel elementum mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas consectetur euismod urna. In hac habitasse platea dictumst. Quisque tincidunt porttitor vestibulum. Ut iaculis, lacus at molestie lacinia, ipsum mi adipiscing ligula, vel mollis sem risus eu lectus. Nunc elit quam, rutrum ut dignissim sit amet, egestas at sem.</p>
@@ -83,6 +29,18 @@
             <a href="https://github.com/lth-elm/dev-web-first-project" target="_blank">Lien vers le code GitHub <i class="fab fa-github fa-2x"></i></a>
         </div>
     </footer>
+  </div>
+</template>
 
-</body>
-</html>
+<script>
+export default {
+  name: 'Home',
+  components: {
+  }
+}
+</script>
+
+
+<style>
+
+</style>
