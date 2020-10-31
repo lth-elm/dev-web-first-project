@@ -235,18 +235,13 @@ aside a p:hover {
     line-height: 30px;
 }
 
-#Ibox >ul >li >a {
-    color: #00008b;
-}
-
-#Ibox >ul >li:hover {
-    color: #00008b;
-    background-color: rgb(219, 217, 217);
-    /*font-weight: bold;*/
-}
-
 #Ibox >ul >li >a:link {
-    color: black;
+    color: #00008b;
+    font-weight: bold;
+}
+
+#Ibox >ul >li >a:hover {
+    color: #3679d1;
 }
 
 /* OPERATION */
