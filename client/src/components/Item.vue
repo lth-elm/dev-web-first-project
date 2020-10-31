@@ -24,7 +24,4 @@ export default {
   top: 10px;
   right: 10px;
 }
-.tem-todo >p {
-  margin-bottom: 0!important ;
-}
 </style>

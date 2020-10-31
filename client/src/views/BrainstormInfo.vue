@@ -1,21 +1,28 @@
 <template>
-<div class="container mt-5">
-<h1>BrainStroming des languages Informatiques</h1>
-        <h3>Bienvenue dans cette session plus fun !!!!!</h3>
-        <form>
-            <div class="form-group">
-                <label for="action">Action</label>
-                <input v-model="formData.tache" type="text" id="action" class="form-control">
-            </div>
-            <button v-on:click.prevent="creationItem" class="btn btn-primary mb-3">Donner un language informatique</button>
-        </form>
-    <ul>
-    <li v-bind:key="index" v-for="(tache,index) in tableauTaches">
-     <item v-bind:id="index" :tache="tache" :suppression="suppression"></item>
-    </li>
-    </ul>
-</div>
-<foot></foot>
+  <div class="container mt-5">
+    <main>
+      <h1 id="theme">Informatique</h1>
+      <div class="main">
+        <article>
+          <h1>BrainStorming des languages Informatiques</h1>
+          <h2>Bienvenue dans cette session plus fun !!!!!</h2>
+          <form>
+              <div class="form-group">
+                  <label for="action">Action</label>
+                  <input v-model="formData.tache" type="text" id="action" class="form-control">
+              </div>
+              <button v-on:click.prevent="creationItem" class="btn btn-primary mb-3">Donner un language informatique</button>
+          </form>
+          <ul>
+          <li v-bind:key="index" v-for="(tache,index) in tableauTaches">
+          <item v-bind:id="index" :tache="tache" :suppression="suppression"></item>
+          </li>
+          </ul>
+        </article>
+      </div>
+    </main>
+  <foot></foot>
+  </div>
 </template>
 
 <script>
@@ -47,13 +54,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-h1 {
-  margin-top: 100px!important;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-</style>
