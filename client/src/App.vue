@@ -95,6 +95,10 @@ header {
     color: #ffd59e;
 }
 
+ul {
+  list-style-type: none;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -146,6 +150,7 @@ nav >ul >li:hover .drop {
 /* MAIN and ARTICLE */
 
 #theme {
+    font-size: 3em;
     padding-top: 10px;
     display: flex;
     justify-content: center;
@@ -155,11 +160,11 @@ nav >ul >li:hover .drop {
 main {
     width: 1200px;
     margin: auto;
+    margin-bottom: 40px;
 }
 
 .main {
     display: flex;
-    margin-bottom: 40px;
 }
 
 article, aside {

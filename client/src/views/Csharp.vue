@@ -1,7 +1,7 @@
 <template>
   <div class="charp">
     <main>
-        <h1 id="theme" style="font-size: 3em;">Informatique</h1>
+        <h1 id="theme">Informatique</h1>
         <div class="main">
             <article>
                 <h1>Le C#</h1>
@@ -189,14 +189,14 @@
                     <input autofocus type="text" name='title' id="title" placeholder="    Titre    "  ><br><br>
                     <textarea
                     placeholder="
-                      ici votre FeedBack"
+                        ici votre FeedBack"
                     name="comment"
                     cols="100"
                     rows="10"
                     ></textarea>
                     <input type="submit" value="Send">
                 </fieldset>
-               </form>
+                </form>
         </div>
     </main>
     <foot></foot>
