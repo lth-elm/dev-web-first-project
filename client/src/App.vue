@@ -16,9 +16,8 @@
                     <li><router-link to="/"><i class="fas fa-home"></i></router-link></li>
                     <li><a href="#">Informatique <i class="fas fa-sort-down"></i></a>
                         <ul class="drop">
-                            <li><a href="#">Python</a></li>
+                            <li><router-link to="/brainstorm">Brainstorming</router-link></li>
                             <li><router-link to="/csharp">C#</router-link></li>
-                            <li><a href="#">Html</a></li>
                           </ul>
                     </li>
                     <li><a href="#">Finance <i class="fas fa-sort-down"></i></a>

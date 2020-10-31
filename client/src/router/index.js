@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import BrainstormInfo from '../views/BrainstormInfo.vue'
 import Csharp from '../views/Csharp.vue'
 
 const routes = [
@@ -7,6 +8,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/brainstorm',
+    name: 'BrainstormInfo',
+    component: BrainstormInfo
   },
   {
     path: '/csharp',
