@@ -237,6 +237,7 @@ footer {
 #lien-github a {
     color: #6fffdb;
     text-decoration: none;
+    margin-right: 40px;
 }
 
 #lien-github a:hover {
@@ -244,7 +245,6 @@ footer {
 }
 
 #lien-github a i {
-    margin-right: 40px;
     margin-left: 10px;
 }
 
