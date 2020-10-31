@@ -28,7 +28,7 @@
                     </li>
                     <li><a href="#">Physique <i class="fas fa-sort-down"></i></a>
                         <ul class="drop">
-                            <li><a href="#">Physique 1</a></li>
+                            <li><router-link to="/physiquememo">PhysiqueMemo</router-link></li>
                             <li><a href="#">Physique 2</a></li>
                           </ul>
                     </li>

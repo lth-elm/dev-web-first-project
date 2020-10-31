@@ -1,0 +1,20 @@
+<template>
+  <div>
+      <p>
+          Naissance : 30 avril 1777, Brunwick.
+          Décès : 23 février 1855, Göttingen.
+          Activités : Travaux en mathématiques et en physiques.
+          Prix : Médaille Copley, Prix Lalande, Ordre bavarois de Maximilien pour la science et l'art.
+      </p><br>
+      <p>1799 — (la) Demonstratio nova theorematis omnem functionem algebraicam rationalem integram
+        unius variabilis in factores reales primi vel secundi gradus resolvi posse</p>
+      <p>1801 — (la) Disquisitiones Arithmeticae</p>
+      <p>1809 — (la) Theoria motus corporum cœlestium in sectionibus conicis solem ambientium</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Texte2'
+}
+</script>
