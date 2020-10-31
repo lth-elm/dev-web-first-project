@@ -206,6 +206,7 @@
 <script>
 import Foot from '../components/foot.vue'
 export default {
+  name: 'Csharp',
   components: {
     foot: Foot
   }
