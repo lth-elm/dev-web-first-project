@@ -199,65 +199,15 @@
                </form>
         </div>
     </main>
-    <footer class="main-footer">
-        <div id="us">
-            <img src="@/assets/images/kakashi-avatar.jpg" width="50" height="50" alt="Avatar Kakashi" />
-            <p>Première manipulation en développement web du jeune kakashi hatake</p>
-        </div>
-        <div id="lien-github">
-            <a href="https://github.com/lth-elm/dev-web-first-project" target="_blank">Lien vers le code GitHub <i class="fab fa-github fa-2x"></i></a>
-        </div>
-    </footer>
+    <foot></foot>
   </div>
 </template>
 
-<style scoped>
-/* NAVIGATION ASIDE */
-
-#Ibox {
-    margin-bottom: 25px;
+<script>
+import Foot from '../components/foot.vue'
+export default {
+  components: {
+    foot: Foot
+  }
 }
-
-#Ibox h1 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-#Ibox > ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-decoration: none;
-}
-
-#Ibox >ul >li {
-    line-height: 30px;
-}
-
-#Ibox >ul >li >a {
-    color: #00008b;
-}
-
-#Ibox >ul >li:hover {
-    color: #00008b;
-    background-color: rgb(219, 217, 217);
-    /*font-weight: bold;*/
-}
-
-#Ibox >ul >li >a:link {
-    color: black;
-}
-
-/* OPERATION */
-
-.tableau {
-    width:"60%";
-}
-
-.op {
-    text-align: center;
-    font-weight: bold;
-}
-
-</style>
+</script>

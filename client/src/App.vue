@@ -1,5 +1,6 @@
 <template>
-  <div class="main-header">
+  <html>
+      <div class="main-header">
         <header>
             <div id="main-title">
                 <div id="logo">
@@ -39,11 +40,11 @@
             </div>
         </header>
     </div>
+  </html>
   <router-view/>
 </template>
 
 <style>
-
 html {
     font-family : 'Baloo Tammudu 2', cursive, Calibri, Arial, Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -207,45 +208,51 @@ aside a p:hover {
     font-weight: bold;
 }
 
-/* FOOTER */
+/* NAVIGATION ASIDE */
 
-footer {
-    margin-top: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #202020;
-    color: #ffffff;
+#Ibox {
+    margin-bottom: 25px;
+}
 
+#Ibox h1 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Bad Script', cursive;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
-#us {
-    margin-left: 40px;
+#Ibox > ul {
     display: flex;
-    flex-direction: row;
-}
-
-#us img {
-    margin-right: 20px;
-    border-radius: 50%;
-}
-
-#lien-github a {
-    color: #6fffdb;
+    flex-direction: column;
+    align-items: flex-start;
     text-decoration: none;
-    margin-right: 40px;
 }
 
-#lien-github a:hover {
-    color: #ffd59e;
+#Ibox >ul >li {
+    line-height: 30px;
 }
 
-#lien-github a i {
-    margin-left: 10px;
+#Ibox >ul >li >a {
+    color: #00008b;
 }
 
+#Ibox >ul >li:hover {
+    color: #00008b;
+    background-color: rgb(219, 217, 217);
+    /*font-weight: bold;*/
+}
+
+#Ibox >ul >li >a:link {
+    color: black;
+}
+
+/* OPERATION */
+
+.tableau {
+    width:"60%";
+}
+
+.op {
+    text-align: center;
+    font-weight: bold;
+}
 </style>

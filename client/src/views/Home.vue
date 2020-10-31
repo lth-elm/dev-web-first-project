@@ -19,22 +19,16 @@
             </aside>
         </div>
     </main>
-    <footer class="main-footer">
-        <div id="us">
-            <img src="@/assets/images/kakashi-avatar.jpg" width="50" height="50" alt="Avatar Kakashi" />
-            <p>Première manipulation en développement web du jeune kakashi hatake</p>
-        </div>
-        <div id="lien-github">
-            <a href="https://github.com/lth-elm/dev-web-first-project" target="_blank">Lien vers le code GitHub <i class="fab fa-github fa-2x"></i></a>
-        </div>
-    </footer>
+    <foot></foot>
   </div>
 </template>
 
 <script>
+import Foot from '../components/foot.vue'
 export default {
   name: 'Home',
   components: {
+    foot: Foot
   }
 }
 </script>
