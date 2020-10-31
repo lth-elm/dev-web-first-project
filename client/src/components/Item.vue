@@ -15,7 +15,8 @@ export default {
 <style scoped>
 .item-todo {
     position: relative;
-    padding: 20px 60px 20px 30px;
+    padding-top: 15px;
+    padding-left: 30px;
     font-size: 20px;
     height: 80px;
 }

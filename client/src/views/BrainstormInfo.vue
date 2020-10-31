@@ -4,8 +4,8 @@
       <h1 id="theme">Informatique</h1>
       <div class="main">
         <article>
-          <h1>BrainStorming des languages Informatiques</h1>
-          <h2>Bienvenue dans cette session plus fun !!!!!</h2>
+          <h1>BrainStorming</h1>
+          <h2>Bienvenue dans cette session plus fun de brainstorming des languages Informatiques !!!</h2>
           <form>
               <div class="form-group">
                   <label for="action">Action</label>
