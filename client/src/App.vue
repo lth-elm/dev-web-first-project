@@ -35,7 +35,7 @@
                 </ul>
             </nav>
             <div id="sign-in">
-                <a href="#" >Sign In <i class="fas fa-sign-in-alt"></i></a>
+                <router-link to="/sign">Sign In<i class="fas fa-sign-in-alt"></i></router-link>
             </div>
         </header>
     </div>

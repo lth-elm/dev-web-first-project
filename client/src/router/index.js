@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import BrainstormInfo from '../views/BrainstormInfo.vue'
 import Csharp from '../views/Csharp.vue'
 import PhysiqueMemo from '../views/PhysiqueMemo.vue'
+import Sign from '../views/Sign.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/physiquememo',
     name: 'PhysiqueMemo',
     component: PhysiqueMemo
+  },
+  {
+    path: '/sign',
+    name: 'Sign',
+    component: Sign
   }
 ]
 
