@@ -40,12 +40,22 @@ export default {
   },
   methods: {
     creationItem: function () {
+      if (!this.formData.tache) {
+        return
+      }
       this.tableauTaches.push(this.formData.tache)
       this.formData.tache = ''
     },
+
     suppression: function (e) {
       // console.log(e.target.parentNode.id)
       this.tableauTaches.splice(e.target.parentNode.id, 1)
+    },
+
+    getLangages () {
+      fetch('/api/v1/langagesinfo')
+        .then(res => res.json())
+        .then(data => { this.tableauTaches = data })
     }
   },
   components: {
