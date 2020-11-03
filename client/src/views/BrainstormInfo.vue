@@ -55,9 +55,18 @@ export default {
     getLangages () {
       fetch('/api/v1/langagesinfo')
         .then(res => res.json())
-        .then(data => { this.tableauTaches = data })
+        .then(data => {
+          for (var langages of data) {
+            this.tableauTaches.push(langages)
+          }
+        })
     }
   },
+
+  created () {
+    this.getLangages()
+  },
+
   components: {
     item: Item,
     foot: Foot
