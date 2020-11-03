@@ -13,11 +13,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><router-link to="/"><i class="fas fa-home"></i></router-link></li>
+                    <li><router-link :to="{ name: 'Home' }"><i class="fas fa-home"></i></router-link></li>
                     <li><a href="#">Informatique <i class="fas fa-sort-down"></i></a>
                         <ul class="drop">
-                            <li><router-link to="/brainstorm">Brainstorming</router-link></li>
-                            <li><router-link to="/csharp">C#</router-link></li>
+                            <li><router-link :to="{ name: 'BrainstormInfo' }">Brainstorming</router-link></li>
+                            <li><router-link :to="{ name: 'Csharp' }">C#</router-link></li>
                           </ul>
                     </li>
                     <li><a href="#">Finance <i class="fas fa-sort-down"></i></a>
@@ -28,14 +28,14 @@
                     </li>
                     <li><a href="#">Physique <i class="fas fa-sort-down"></i></a>
                         <ul class="drop">
-                            <li><router-link to="/physiquememo">Memo Physique</router-link></li>
+                            <li><router-link :to="{ name: 'PhysiqueMemo' }">Memo Physique</router-link></li>
                             <li><a href="#">Physique 2</a></li>
                           </ul>
                     </li>
                 </ul>
             </nav>
             <div id="sign-in">
-                <router-link to="/sign">Sign In<i class="fas fa-sign-in-alt"></i></router-link>
+                <router-link :to="{ name: 'Sign' }">Sign In<i class="fas fa-sign-in-alt"></i></router-link>
             </div>
         </header>
     </div>
