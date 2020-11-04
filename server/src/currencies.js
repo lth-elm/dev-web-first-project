@@ -1,45 +1,115 @@
-const express = require('express')
 const fetch = require('isomorphic-fetch')
+
+const express = require('express')
 
 const router = new express.Router()
 
-router.get('/', function getRoot(req, res) {
+const apiBaseUrl = 'https://pro-api.coinmarketcap.com/v1'
+
+// Fonction réutilisable pour faire des appels à l'API CMC
+function fetchCMC (path) {
     const apiKey = process.env.CMC_API_KEY
 
-    fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+    return fetch(`${apiBaseUrl}${path}`, {
         method: "GET",
         headers: {
             accept: 'application/json',
             'x-cmc_pro_api_key': apiKey
         }
     })
-    .then(function(fetchResponse){
+    .then(fetchResponse => {
         return fetchResponse.json();
     })
-    .catch(error => console.error(error))
-    .then(function (responseData) {
-        res.json(responseData)
-        /*
-        const errorCode = responseData.status.errorCode
+    .then(responseData => {
+        const errorCode = responseData.status.error_code
         if (errorCode != 0) {
-            res.json({
-                success: false,
-                message: 'Error'
-            })
-            return
+            throw new Error(responseData.status.error_message)
         }
-        const currencies = responseData.data
-        console.log(currencies)
-        res.json(currencies)
-        */
+        return responseData.data
+    })
+}
+
+router.get('/', function getRoot(req, res) {
+
+    const path = '/cryptocurrency/listings/latest'
+
+    fetchCMC(path)
+    .then(currencies => {
+        res.json({
+            success: true,
+            currencies: currencies.map(currency => ({
+                id: currency.id,
+                name: currency.name,
+                slug: currency.slug,
+                quote: currency.quote,
+            })),
+        })
+    })
+    .catch(error => {
+        res.json({
+            success: false,
+            message: error.message
+        })
+    })
+
+    /*
+    fetchCMC('/cryptocurrency/listings/latest')
+    .catch(error => {
+        res.json({
+            success: false,
+            message: error.message
+        })
+        throw error
+    })
+    .then(function (responseData) {
+        res.json({
+            success: true,
+            data: responseData.data
+        })
+    })
+    */
+})
+
+router.get('/top3', function getRoot(req, res) {
+
+    const path = '/cryptocurrency/listings/latest'
+
+    fetchCMC(path)
+    .then(currencies => {
+        res.json({
+            success: true,
+            currencies: [
+            { name: currencies[0].name, price: currencies[0].quote.USD.price.toFixed(2)}, 
+            { name: currencies[1].name, price: currencies[1].quote.USD.price.toFixed(2)}, 
+            { name: currencies[2].name, price: currencies[2].quote.USD.price.toFixed(6)},  
+        ]
+        })
+    })
+    .catch(error => {
+        res.json({
+            success: false,
+            message: error.message
+        })
     })
 })
 
-router.get('/:crypto', function getRoot(req, res) {
-    const crypto = req.params.crypto
-    res.json({
-        success: true,
-        crypto: crypto,
+router.get('/:currencyslug', function getRoot(req, res) {
+    const crypto = req.params.currencyslug
+
+    const path = '/cryptocurrency/info?slug=' + crypto
+
+    fetchCMC(path)
+    .then(crypto => {
+        res.json({
+            success: true,
+            crypto
+        })
+    })
+    .catch(error => {
+        res.json({
+            success: false,
+            message: error.message
+        })
     })
 })
 
