@@ -2,7 +2,7 @@ const express = require('express')
 
 const router = new express.Router()
 
-router.get('/langagesinfo', (req, res) => {
+router.get('/', (req, res) => {
     res.json(
       [
         'C',
