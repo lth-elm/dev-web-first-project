@@ -13,8 +13,8 @@
           </article>
           <aside>
               <h1>Ressources utilisés</h1>
-              <a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Wikipedia_logo_%28svg%29.svg" width="50" height="50" alt="Logo de Wikipedia" /><p>Wikipedia</p></a>
-              <a href="https://cryptoast.fr/" target="_blank"><img src="https://cryptoast.fr/wp-content/uploads/2020/04/logo-cryptoast-450px.png" width="50" height="50" alt="Logo de Cryptoast" /><p>Cryptoast</p></a>
+              <a href="https://coinmarketcap.com/fr/" target="_blank"><img src="https://seeklogo.com/images/C/coinmarketcap-logo-4378FC5465-seeklogo.com.png" width="50" height="50" alt="Logo CoinMarketCap" /><p>Coin Market Cap</p></a>
+              <a href="https://esilv.stormier.ninja/" target="_blank"><img src="https://esilv.stormier.ninja/assets/img/ninja@mini.png" width="50" height="50" alt="Logo de Stormier Ninja" /><p>Developpement Web</p></a>
               <a href="https://openclassrooms.com/fr/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/fr/0/0d/Logo_OpenClassrooms.png" width="50" height="50" alt="Logo OpenClassrooms" /><p>OpenClassroom</p></a>
           </aside>
       </div>
