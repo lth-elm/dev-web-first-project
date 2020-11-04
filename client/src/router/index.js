@@ -4,6 +4,7 @@ import BrainstormInfo from '../views/BrainstormInfo.vue'
 import Csharp from '../views/Csharp.vue'
 import PhysiqueMemo from '../views/PhysiqueMemo.vue'
 import Sign from '../views/Sign.vue'
+import Crypto from '../views/Crypto.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/sign',
     name: 'Sign',
     component: Sign
+  },
+  {
+    path: '/cryptomonnaie',
+    name: 'Crypto',
+    component: Crypto
   }
 ]
 

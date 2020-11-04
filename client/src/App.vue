@@ -23,7 +23,7 @@
                     <li><a href="#">Finance <i class="fas fa-sort-down"></i></a>
                         <ul class="drop">
                             <li><a href="#">Marché financier</a></li>
-                            <li><a href="#">Cryptomonnaie</a></li>
+                            <li><router-link :to="{ name: 'Crypto' }">Cryptomonnaie</router-link></li>
                           </ul>
                     </li>
                     <li><a href="#">Physique <i class="fas fa-sort-down"></i></a>
