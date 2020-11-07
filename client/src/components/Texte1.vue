@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="txt1">
+        <h3>Devinette n°1</h3>
         <p>
             Naissance : 10 juillet 1856, Smijan (Autriche).
             Décès : 7 janvier 1943, New York.

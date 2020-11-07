@@ -2,16 +2,18 @@
   <div class="container mt-5">
     <main>
       <h1 id="theme">Informatique</h1>
-      <div class="main">
+      <div class="card">
         <article>
           <h1>BrainStorming</h1>
           <h2>Bienvenue dans cette session plus fun de brainstorming des languages Informatiques !!!</h2>
           <form>
-              <div class="form-group">
-                  <label for="action">Action</label>
-                  <input v-model="formData.tache" type="text" id="action" class="form-control">
+              <div class="Box">
+                  <div class="BoxHeader"><label for="action">Langages de Programmation, Logiciels, et autres</label></div>
+                  <h5 class="BoxTitre">Saisir votre idée en BAS</h5>
+                  <p class="BoxTexte">With supporting text below as a natural lead-in to additional content.</p>
+                  <input v-model="formData.tache" type="text" id="action" class="Entrer">
               </div>
-              <button v-on:click.prevent="creationItem" class="btn btn-primary mb-3">Donner un language informatique</button>
+              <button v-on:click.prevent="creationItem" class="btn">Donner un language informatique</button>
           </form>
           <ul>
           <li v-bind:key="index" v-for="(tache,index) in tableauTaches">
@@ -73,3 +75,59 @@ export default {
   }
 }
 </script>
+<style>
+.Box{
+  position: relative;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  min-width: 0;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  margin-bottom: 0.1rem;
+}
+.BoxHeader{
+  text-align: center;
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0,0,0,0.03);
+  border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+.BoxTitle{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  text-align: left;
+}
+.BoxTexte{
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+.Entrer{
+  width: 50%;
+  border-radius: 1rem;
+  text-align: center;
+  border-color: black;
+  height: 20%;
+  font-size: larger;
+}
+.btn{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  user-select: none;
+  background-color: rgb(78, 228, 78);
+  color: #fff;
+}
+.btn:hover{
+  background-color: darkgreen;
+}
+</style>

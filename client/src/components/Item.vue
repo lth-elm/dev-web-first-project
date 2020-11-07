@@ -1,7 +1,7 @@
 <template>
-    <div class="card my-2 item-todo">
-    <p>{{ tache }}</p>
-    <div v-on:click="suppression" class="btn-supr btn btn-danger">X</div>
+    <div class="box">
+    <p class="Texte">{{ tache }}</p>
+    <div v-on:click="suppression" class="suppr"></div>
     </div>
 </template>
 
@@ -13,16 +13,38 @@ export default {
 </script>
 
 <style scoped>
-.item-todo {
+.box {
     position: relative;
-    padding-top: 15px;
-    padding-left: 30px;
-    font-size: 20px;
-    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
-.btn-supr {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+
+.Texte{
+  display: block;
+      padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  background-color: white;
+  font-size: 200%;
+  text-align: center;
+  width: 60%;
+}
+
+.suppr{
+  display: flex;
+  background-color: rgb(51, 216, 51);
+  width: 54px;
+  margin: 32px;
+  border-radius: 1em;
+}
+
+.suppr:hover{
+  background-color: red;
 }
 </style>

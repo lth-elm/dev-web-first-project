@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>Devinette n°2</h3>
       <p>
           Naissance : 30 avril 1777, Brunwick.
           Décès : 23 février 1855, Göttingen.

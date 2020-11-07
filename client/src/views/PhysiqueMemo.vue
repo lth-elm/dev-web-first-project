@@ -6,17 +6,17 @@
         <article>
           <h1>Memo</h1>
           <h3>{{message}}</h3>
-          <div class="btn btn-outline-primary mr-2" v-on:click="t1">Devinette 1</div>
-          <div class= "btn btn-outline-primary" v-on:click="t2">Devinette 2</div>
+          <div class="btnDevinette" v-on:click="t1">Devinette 1</div>
+          <div class= "btnDevinette" v-on:click="t2">Devinette 2</div>
 
-          <div class="onglets card mb-5" v-if="toggle1">
-            <texte1 class="p-5"></texte1>
+          <div class="onglets" v-if="toggle1">
+            <texte1></texte1>
           </div>
-          <div class="onglets card mb-5" v-if="toggle2">
-            <texte2 class="p-5"></texte2>
+          <div class="onglets" v-if="toggle2">
+            <texte2></texte2>
           </div>
           <modale v-bind:revele="revele" v-bind:toggleModale="toggleModale"></modale>
-          <div v-on:click="toggleModale" class="btn btn-success">Réponse</div>
+          <div v-on:click="toggleModale" class="btn">Réponse</div>
         </article>
       </div>
       <br><p>OBJECTIF AFFICHER L'IMAGE ICI</p>
@@ -61,3 +61,23 @@ export default {
   }
 }
 </script>
+<style>
+.btnDevinette{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  user-select: none;
+  background-color: rgb(38, 90, 201);
+  color: #fff;
+}
+.onglets{
+  margin: 1px;
+  background-color: seashell;
+  width: 60%;
+}
+</style>

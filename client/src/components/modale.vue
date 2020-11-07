@@ -1,8 +1,8 @@
 <template>
     <div class="bloc-modale" v-if="revele">
         <div v-on:click="toggleModale" class="overlay"></div>
-        <div class="modale card">
-            <div v-on:click="toggleModale" class="btn-modale btn btn-primary">X</div>
+        <div class="modale">
+            <div v-on:click="toggleModale" class="btn-modale">X</div>
             <h5>devinette n°1 : {{devi1}}</h5>
             <h5>devinette n°2 : {{devi2}}</h5>
         </div>
@@ -47,7 +47,7 @@ export default {
 }
 .modale {
     background: #F1F1F1;
-    color: #333;
+    color:black;
     padding: 50px;
     position: fixed;
     bottom: 10%;
@@ -56,6 +56,8 @@ export default {
     position: absolute;
     top: 10px;
     right: 10px;
+    color:white;
+    background-color: tomato;
 }
 .danger {
     align-items: center;
