@@ -59,6 +59,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .main-header {
@@ -158,7 +159,7 @@ nav >ul >li:hover .drop {
 }
 
 main {
-    width: 1200px;
+    width: 90%;
     margin: auto;
     margin-bottom: 40px;
 }
@@ -185,6 +186,7 @@ article h1 {
 aside {
     border-left: 1px solid black;
     margin-top: 90px;
+    padding-left: 40px;
     flex: 1;
     display: flex;
     flex-direction: column;
