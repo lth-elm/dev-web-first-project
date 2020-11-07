@@ -19,7 +19,6 @@
           <div v-on:click="toggleModale" class="btn">Réponse</div>
         </article>
       </div>
-      <br><p>!! OBJECTIF AFFICHER L'IMAGE ICI !!</p>
     </main>
   <foot></foot>
   </div>
