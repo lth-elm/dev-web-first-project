@@ -11,7 +11,7 @@
             v-for="crypto in cryptomonnaies"
             :key="crypto"
           >
-          {{crypto}}
+          Name : {{crypto.name}} - Price : {{crypto.price}} $
           </li>
           </ul>
         </article>
@@ -31,10 +31,10 @@ export default {
     }
   },
   methods: {
-    getCrytpo () {
-      fetch('/api/v1/langagesinfo')
+    getCrypto () {
+      fetch('/api/v1/currencies/top3')
         .then(res => res.json())
-        .then(data => { this.cryptomonnaies = data })
+        .then(data => { this.cryptomonnaies = data.currencies })
     }
   },
 
