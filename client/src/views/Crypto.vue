@@ -4,7 +4,7 @@
       <h1 id="theme">Finance</h1>
       <div class="main">
         <article>
-          <h1>Cryptmonnaie</h1>
+          <h1>cryptomonnaies</h1>
           <h2>Top 3 des cryptomonnaies dominantes</h2>
           <ul>
           <li
