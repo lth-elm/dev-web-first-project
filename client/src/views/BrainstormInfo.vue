@@ -5,15 +5,15 @@
       <div class="card">
         <article>
           <h1>BrainStorming</h1>
-          <h2>Bienvenue dans cette session plus fun de brainstorming des languages Informatiques !!!</h2>
+          <h2>Bienvenue dans cette session plus fun de brainstorming des languages informatiques !</h2>
           <form>
               <div class="Box">
-                  <div class="BoxHeader"><label for="action">Langages de Programmation, Logiciels, et autres</label></div>
-                  <h5 class="BoxTitre">Saisir votre idée en BAS</h5>
-                  <p class="BoxTexte">With supporting text below as a natural lead-in to additional content.</p>
+                  <div class="BoxHeader"><label for="action">Langages de programmations, logiciels et autres...</label></div>
+                  <h5 class="BoxTitre">Saisir vos idées en BAS</h5>
+                  <p class="BoxTexte">Certains languages populaires ont été préajoutés.</p>
                   <input v-model="formData.tache" type="text" id="action" class="Entrer">
               </div>
-              <button v-on:click.prevent="creationItem" class="btn">Donner un language informatique</button>
+              <button v-on:click.prevent="creationItem" class="btn">Valider</button>
           </form>
           <ul>
           <li v-bind:key="index" v-for="(tache,index) in tableauTaches">

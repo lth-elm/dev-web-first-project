@@ -19,7 +19,7 @@
           <div v-on:click="toggleModale" class="btn">Réponse</div>
         </article>
       </div>
-      <br><p>OBJECTIF AFFICHER L'IMAGE ICI</p>
+      <br><p>!! OBJECTIF AFFICHER L'IMAGE ICI !!</p>
     </main>
   <foot></foot>
   </div>
@@ -34,7 +34,7 @@ export default {
   name: 'PhysiqueMemo',
   data () {
     return {
-      message: 'Quelque repère en physique',
+      message: 'Quelques repères en physique',
       toggle1: true,
       toggle2: false,
       revele: false

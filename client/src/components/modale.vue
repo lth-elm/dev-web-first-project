@@ -7,7 +7,7 @@
             <h5>devinette n°2 : {{devi2}}</h5>
         </div>
     </div>
-    <p class="danger">IL Faut d'abord faire tous les devinettes avant d'appuyer sur la réponse !!!!!</p>
+    <p class="danger">Attention : la réponse affichera les résultats des deux devinettes !</p>
 </template>
 
 <script>

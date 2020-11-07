@@ -1,12 +1,11 @@
 <template>
   <div>
     <h3>Devinette n°2</h3>
-      <p>
-          Naissance : 30 avril 1777, Brunwick.
-          Décès : 23 février 1855, Göttingen.
-          Activités : Travaux en mathématiques et en physiques.
-          Prix : Médaille Copley, Prix Lalande, Ordre bavarois de Maximilien pour la science et l'art.
-      </p><br>
+      <p>Naissance : 30 avril 1777, Brunwick.</p>
+      <p>Décès : 23 février 1855, Göttingen.</p>
+      <p>Activités : Travaux en mathématiques et en physiques.</p>
+      <p>Prix : Médaille Copley, Prix Lalande, Ordre bavarois de Maximilien pour la science et l'art.</p>
+      <br>
       <p>1799 — (la) Demonstratio nova theorematis omnem functionem algebraicam rationalem integram
         unius variabilis in factores reales primi vel secundi gradus resolvi posse</p>
       <p>1801 — (la) Disquisitiones Arithmeticae</p>
