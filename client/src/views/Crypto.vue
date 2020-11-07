@@ -11,7 +11,7 @@
             v-for="crypto in cryptomonnaies"
             :key="crypto"
           >
-          Name : {{crypto.name}} - Price : {{crypto.price}} $
+          {{cryptomonnaies.indexOf(crypto) + 1}}. Name : {{crypto.name}} - Price : {{crypto.price}} $
           </li>
           </ul>
         </article>
