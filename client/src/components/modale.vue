@@ -38,7 +38,7 @@ export default {
     align-items: center;
 }
 .overlay {
-    background: rgba(0,0,0,5);
+    background: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -47,7 +47,7 @@ export default {
 }
 .modale {
     background: #F1F1F1;
-    color:black;
+    color:rgb(0, 0, 0);
     padding: 50px;
     position: fixed;
     bottom: 10%;
