@@ -78,11 +78,9 @@ router.get('/top3', function getRoot(req, res) {
     .then(currencies => {
         res.json({
             success: true,
-            currencies: [
-            { name: currencies[0].name, price: currencies[0].quote.USD.price.toFixed(2)}, 
-            { name: currencies[1].name, price: currencies[1].quote.USD.price.toFixed(2)}, 
-            { name: currencies[2].name, price: currencies[2].quote.USD.price.toFixed(6)},  
-        ]
+            currencies: currencies.slice(0, 3).map(currency => {
+                return { name : currency.name, price: currency.quote.USD.price.toFixed(2) }
+            })
         })
     })
     .catch(error => {
