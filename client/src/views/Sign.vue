@@ -38,7 +38,6 @@
             </article>
             <button v-if="CheckButtom" v-on:click="envoiForm" class="btn">Envoyer</button>
     </main>
-    <foot></foot>
 </template>
 <script>
 export default {
