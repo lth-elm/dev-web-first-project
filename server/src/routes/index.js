@@ -10,7 +10,7 @@ const verifyToken = require('../middlewares/verify-token.js')
 const router = new express.Router()
 
 router.use('/langagesinfo', langagesinfoRoutes)
-router.use('currencies', verifyToken, currenciesRoutes)
+router.use('/currencies', currenciesRoutes)
 router.use('/auth', authRoutes)
 
 module.exports = router
