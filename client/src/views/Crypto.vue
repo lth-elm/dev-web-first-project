@@ -6,6 +6,12 @@
         <article>
           <h1>cryptomonnaies</h1>
           <h2>Top 3 des cryptomonnaies dominantes</h2>
+          <p
+            v-if="error"
+            class="error"
+          >
+            {{ error }}
+          </p>
           <ul>
           <li
             v-for="crypto in cryptomonnaies"
@@ -27,7 +33,8 @@ export default {
   name: 'Crypto',
   data () {
     return {
-      cryptomonnaies: []
+      cryptomonnaies: [],
+      error: ''
     }
   },
   methods: {
@@ -35,6 +42,7 @@ export default {
       fetch('/api/v1/currencies/top3')
         .then(res => res.json())
         .then(data => { this.cryptomonnaies = data.currencies })
+        .catch(error => { this.error = error })
     }
   },
 

@@ -6,6 +6,12 @@
         <article>
           <h1>BrainStorming</h1>
           <h2>Bienvenue dans cette session plus fun de brainstorming des languages informatiques !</h2>
+          <p
+            v-if="error"
+            class="error"
+          >
+            {{ error }}
+          </p>
           <form>
               <div class="Box">
                   <div class="BoxHeader"><label for="action">Langages de programmations, logiciels et autres...</label></div>
@@ -37,7 +43,8 @@ export default {
       formData: {
         tache: ''
       },
-      tableauTaches: ['JavaScript', 'Vue', 'Python', 'React']
+      tableauTaches: ['JavaScript', 'Vue', 'Python', 'React'],
+      error: ''
     }
   },
   methods: {
@@ -62,6 +69,7 @@ export default {
             this.tableauTaches.push(langages)
           }
         })
+        .catch(error => { this.error = error })
     }
   },
 
@@ -75,6 +83,7 @@ export default {
   }
 }
 </script>
+
 <style>
 .Box{
   position: relative;
