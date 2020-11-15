@@ -1,11 +1,20 @@
-const { verify } = require("jsonwebtoken")
+const tokenUtils = require('../utils/token-utils.js')
 
 function verifyToken (req, res, next) {
-    const token = verifyToken(req.header('Authorization'))
-
-    if (token) {
+    try {
+        // split
+        // const token = req.header('Authorization').split(' ')[1]
+        // substring
+        // const token = req.header('Authorization').substring(7)
+        // replace
+        const token = req.header('Authorization').replace('Bearer ', '')
+        tokenUtils.checkToken(token)
         next()
-        return
+    } catch (error) {
+        res.json({
+            success: false,
+            message: 'Invalid token'
+        })        
     }
 }
 
