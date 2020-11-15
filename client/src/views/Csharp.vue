@@ -31,104 +31,107 @@
                 <br>
                 <div>
                     <h2><a id="Operations">Les Opérations</a></h2>
-                    <table class="tableau" border="1" bordercolor="red" cellspacing="2" cellpadding="2">
-                        <tr>
-                            <td>Fonction</td>
-                            <td>Symbole</td>
-                        </tr>
-                        <tr><td class="op" colspan="2">Arithmétiques</td></tr>
-                        <tr>
-                            <td>Addition (utile aussi pour la concaténation de chaine de caractères)</td>
-                            <td class="op">+</td>
-                        </tr>
-                        <tr>
-                            <td>Soustraction</td>
-                            <td class="op">-</td>
-                        </tr>
-                        <tr>
-                            <td>Multiplication</td>
-                            <td class="op">*</td>
-                        </tr>
-                        <tr>
-                            <td>Division </td>
-                            <td class="op">/</td>
-                        </tr>
-                        <tr>
-                            <td>Modulo (reste de la division entière)</td>
-                            <td class="op">%</td>
-                        </tr>
-                        <tr><td class="op" colspan="2">Affectation</td></tr>
-                        <tr>
-                            <td>Affectation</td>
-                            <td class="op">=</td>
-                        </tr>
-                        <tr>
-                            <td>Addition puis affectation </td>
-                            <td class="op">+=</td>
-                        </tr>
-                        <tr>
-                            <td>Soustraction puis affectation </td>
-                            <td class="op">-=</td>
-                        </tr>
-                        <tr>
-                            <td>Multiplication puis affectation</td>
-                            <td class="op">*= </td>
-                        </tr>
-                        <tr>
-                            <td>Division puis affectation </td>
-                            <td class="op">/=</td>
-                        </tr>
-                        <tr>
-                            <td>Modulo puis affectation </td>
-                            <td class="op">%=</td>
-                        </tr>
-                        <tr>
-                            <td>Incrémentation de 1</td>
-                            <td class="op">++</td>
-                        </tr>
-                        <tr>
-                            <td>Décrémentation de 1</td>
-                            <td class="op">--</td>
-                        </tr>
-                        <tr><td class="op" colspan="2">Comparaison</td></tr>
-                        <tr>
-                            <td>Égalite</td>
-                            <td class="op">==</td>
-                        </tr>
-                        <tr>
-                            <td>Non égalité (différence) </td>
-                            <td class="op">!=</td>
-                        </tr>
-                        <tr>
-                            <td>Inférieur strictement</td>
-                            <td class="op">&lt;</td>
-                        </tr>
-                        <tr>
-                            <td>Inférieur ou égal</td>
-                            <td class="op">&lt;=</td>
-                        </tr>
-                        <tr>
-                            <td>Supérieur strictement</td>
-                            <td class="op">&gt;</td>
-                        </tr>
-                        <tr>
-                            <td>Supérieur ou égal</td>
-                            <td class="op">&gt;=</td>
-                        </tr>
-                        <tr><td class="op" colspan="2">Logiques</td></tr>
-                        <tr>
-                            <td>ET logique</td>
-                            <td class="op">&&</td>
-                        </tr>
-                        <tr>
-                            <td>OU logique</td>
-                            <td class="op">||
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>NON logique</td>
-                            <td class="op">!</td>
-                        </tr>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Fonctions</th>
+                                <th>Symboles</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="op" colspan="2">Arithmétiques</td></tr>
+                            <tr>
+                                <td>Addition (utile aussi pour la concaténation de chaine de caractères)</td>
+                                <td class="op">+</td>
+                            </tr>
+                            <tr>
+                                <td>Soustraction</td>
+                                <td class="op">-</td>
+                            </tr>
+                            <tr>
+                                <td>Multiplication</td>
+                                <td class="op">*</td>
+                            </tr>
+                            <tr>
+                                <td>Division </td>
+                                <td class="op">/</td>
+                            </tr>
+                            <tr>
+                                <td>Modulo (reste de la division entière)</td>
+                                <td class="op">%</td>
+                            </tr>
+                            <tr><td class="op" colspan="2">Affectation</td></tr>
+                            <tr>
+                                <td>Affectation</td>
+                                <td class="op">=</td>
+                            </tr>
+                            <tr>
+                                <td>Addition puis affectation </td>
+                                <td class="op">+=</td>
+                            </tr>
+                            <tr>
+                                <td>Soustraction puis affectation </td>
+                                <td class="op">-=</td>
+                            </tr>
+                            <tr>
+                                <td>Multiplication puis affectation</td>
+                                <td class="op">*= </td>
+                            </tr>
+                            <tr>
+                                <td>Division puis affectation </td>
+                                <td class="op">/=</td>
+                            </tr>
+                            <tr>
+                                <td>Modulo puis affectation </td>
+                                <td class="op">%=</td>
+                            </tr>
+                            <tr>
+                                <td>Incrémentation de 1</td>
+                                <td class="op">++</td>
+                            </tr>
+                            <tr>
+                                <td>Décrémentation de 1</td>
+                                <td class="op">--</td>
+                            </tr>
+                            <tr><td class="op" colspan="2">Comparaison</td></tr>
+                            <tr>
+                                <td>Égalite</td>
+                                <td class="op">==</td>
+                            </tr>
+                            <tr>
+                                <td>Non égalité (différence) </td>
+                                <td class="op">!=</td>
+                            </tr>
+                            <tr>
+                                <td>Inférieur strictement</td>
+                                <td class="op">&lt;</td>
+                            </tr>
+                            <tr>
+                                <td>Inférieur ou égal</td>
+                                <td class="op">&lt;=</td>
+                            </tr>
+                            <tr>
+                                <td>Supérieur strictement</td>
+                                <td class="op">&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>Supérieur ou égal</td>
+                                <td class="op">&gt;=</td>
+                            </tr>
+                            <tr><td class="op" colspan="2">Logiques</td></tr>
+                            <tr>
+                                <td>ET logique</td>
+                                <td class="op">&&</td>
+                            </tr>
+                            <tr>
+                                <td>OU logique</td>
+                                <td class="op">||</td>
+                            </tr>
+                            <tr>
+                                <td>NON logique</td>
+                                <td class="op">!</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
                 <br><br>
@@ -212,3 +215,42 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.styled-table {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #e0e0e0;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+</style>
