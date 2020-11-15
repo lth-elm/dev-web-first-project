@@ -1,13 +1,12 @@
-const jwt = require('jsonwebtoken')
 const express = require('express')
 
-const router = new express.Router()
+const tokenUtils = require('../utils/token-utils.js')
 
+const router = new express.Router()
 
 router.post('/token', (req, res) => {
     const authorizedLogin = process.env.AUTHORIZED_LOGIN
     const authorizedPasswd = process.env.AUTHORIZED_PASSWD
-    const tokenSecret = process.env.SECRET || '53CR37!'
 
     const body = req.body
 
@@ -27,17 +26,11 @@ router.post('/token', (req, res) => {
         return
     }
 
-    const options = {
-        expiresIn: '1h',
-    }
-
-    const secret = tokenSecret
-
     const payload = {
         login: body.login,
     }
 
-    const token = jwt.sign(payload, secret, options)
+    const token = tokenUtils.sign(payload)
 
     res.json({
         success: true,
