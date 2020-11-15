@@ -7,7 +7,7 @@
           <h1>Memo</h1>
           <h3>{{message}}</h3>
           <div class="btnDevinette" v-on:click="t1">Devinette 1</div>
-          <div class= "btnDevinette" v-on:click="t2">Devinette 2</div>
+          <div class="btnDevinette" v-on:click="t2">Devinette 2</div>
 
           <div class="onglets" v-if="toggle1">
             <texte1></texte1>
@@ -60,8 +60,9 @@ export default {
   }
 }
 </script>
-<style>
-.btnDevinette{
+
+<style scoped>
+.btnDevinette {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -71,11 +72,18 @@ export default {
   line-height: 1.5;
   border-radius: .25rem;
   user-select: none;
-  background-color: rgb(38, 90, 201);
+  background-color: #265ac9;
   color: #fff;
+  margin-right: 15px;
 }
-.onglets{
-  margin: 1px;
+
+.btnDevinette:hover {
+  background-color: #4779e7;
+}
+
+.onglets {
+  margin-top: 30px;
+  padding: 5px 30px 5px 30px;
   background-color: seashell;
   width: 60%;
 }
