@@ -53,11 +53,16 @@ export default {
     bottom: 10%;
 }
 .btn-modale {
+    user-select: none;
     position: absolute;
+    padding: 5px;
     top: 10px;
     right: 10px;
     color:white;
     background-color: tomato;
+}
+.btn-modale:hover {
+    background-color: red;
 }
 .danger {
     align-items: center;

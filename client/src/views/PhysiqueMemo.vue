@@ -87,4 +87,21 @@ export default {
   background-color: seashell;
   width: 60%;
 }
+
+.btn{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  user-select: none;
+  background-color: rgb(78, 228, 78);
+  color: #fff;
+}
+.btn:hover{
+  background-color: darkgreen;
+}
 </style>
