@@ -5,7 +5,7 @@
       <div class="main">
         <article>
           <h1>Cryptomonnaies</h1>
-          <h2>Top 3 des cryptomonnaies dominantes</h2>
+          <h2>Top 10 des cryptomonnaies dominantes</h2>
           <p
             v-if="error"
             class="error"
@@ -18,7 +18,7 @@
                   <tr>
                       <th>Rank</th>
                       <th>Name</th>
-                      <th>Price ($)</th>
+                      <th>Price</th>
                   </tr>
               </thead>
               <tbody>
@@ -28,7 +28,7 @@
                   >
                     <td>{{cryptomonnaies.indexOf(crypto) + 1}}</td>
                     <td>{{crypto.name}}</td>
-                    <td>{{crypto.price}}</td>
+                    <td>$ {{crypto.price}}</td>
                   </tr>
               </tbody>
             </table>
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     getCrypto () {
-      fetch('/api/v1/currencies/top3')
+      fetch('/api/v1/currencies/top10')
         .then(res => res.json())
         .then(data => { this.cryptomonnaies = data.currencies })
         .catch(error => { this.error = error })

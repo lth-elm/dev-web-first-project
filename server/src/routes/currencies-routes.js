@@ -68,7 +68,7 @@ router.get('/', function getRoot(req, res) {
     */
 })
 
-router.get('/top3', function getRoot(req, res) {
+router.get('/top10', function getRoot(req, res) {
 
     const path = '/cryptocurrency/listings/latest'
 
@@ -76,7 +76,7 @@ router.get('/top3', function getRoot(req, res) {
     .then(currencies => {
         res.json({
             success: true,
-            currencies: currencies.slice(0, 3).map(currency => {
+            currencies: currencies.slice(0, 10).map(currency => {
                 return { name : currency.name, price: currency.quote.USD.price.toFixed(2) }
             })
         })
