@@ -14,15 +14,17 @@ export default {
 
 <style scoped>
 .box {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .Texte{
-  display: block;
-      padding: .375rem .75rem;
+  display: flex;
+  justify-content: center;
+  padding: .375rem .75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;

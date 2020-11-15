@@ -95,7 +95,8 @@ export default {
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
+  padding: 10px 15px 20px 15px;
 }
 .BoxHeader{
   text-align: center;
