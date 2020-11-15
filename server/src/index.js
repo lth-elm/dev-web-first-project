@@ -1,8 +1,8 @@
 const dotenv = require('dotenv')
 const express = require('express')
+const bodyParser = require('body-parser')
 
-const langagesinfoRoutes = require('./langagesinfo.js')
-const currenciesRoutes = require('./currencies.js')
+const router = require('./routes/index.js')
 
 const app = express()
 
@@ -10,8 +10,9 @@ dotenv.config()
 
 const port = 3000
 
-app.use('/api/v1/langagesinfo', langagesinfoRoutes)
-app.use('/api/v1/currencies', currenciesRoutes)
+app.use(bodyParser.json())
+
+app.use('/api/v1', router)
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
