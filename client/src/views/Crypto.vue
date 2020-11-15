@@ -12,14 +12,27 @@
           >
             {{ error }}
           </p>
-          <ul>
-          <li
-            v-for="crypto in cryptomonnaies"
-            :key="crypto"
-          >
-          {{cryptomonnaies.indexOf(crypto) + 1}}. Name : {{crypto.name}} - Price : {{crypto.price}} $
-          </li>
-          </ul>
+          <div class="ranktable">
+            <table class="styled-table">
+              <thead>
+                  <tr>
+                      <th>Rank</th>
+                      <th>Name</th>
+                      <th>Price ($)</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr
+                    v-for="crypto in cryptomonnaies"
+                    :key="crypto"
+                  >
+                    <td>{{cryptomonnaies.indexOf(crypto) + 1}}</td>
+                    <td>{{crypto.name}}</td>
+                    <td>{{crypto.price}}</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
         </article>
       </div>
     </main>
@@ -55,3 +68,46 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.ranktable {
+  display: flex;
+  justify-content: center;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #e0e0e0;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+</style>
