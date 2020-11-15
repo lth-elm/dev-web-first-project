@@ -3,7 +3,7 @@
 @host = localhost
 @baseUrl = http://{{host}}:{{port}}{{apiPrefix}}
 
-@currenciesPath = {{baseUrl}}/currencies
+@currenciesPath = {{baseUrl}}/verifytoken/currencies
 
 ###
 GET {{currenciesPath}} HTTP/1.1
