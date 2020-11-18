@@ -1,7 +1,7 @@
 <template>
     <main>
             <article>
-                <h1>Sign In/UP</h1>
+                <h1>Sign In/Up</h1>
             <form>
                 <div class="form-group">
                     <label for="prenom">Prénom</label>
@@ -14,26 +14,21 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="mail">Email</label>
-                    <input v-model="mail" v-on:input="refaire" type="email" id="mail" class="form-control" placeholder="Mail">
+                    <label for="username">Username</label>
+                    <input v-model="username" v-on:input="refaire" type="username" id="username" class="form-control" placeholder="Username">
                 </div>
                 <div class="form-group">
                     <label for="cle">Mot de passe</label>
                     <input type="password" v-on:input="refaire" id="cle" class="form-control" placeholder="Mot de Passe">
                 </div>
-                <div class="form-group">
-                    <label for="txt">Description rapide</label>
-                    <textarea v-model="txt" v-on:input="refaire" class="form-control" id="txt" placeholder="Description" maxlength="50"></textarea>
-                </div>
             </form>
             <div v-if="infoSubmit" class="resultat">
-            <h2>Résultat</h2>
-            <div class="Tab">
-                <p>Prénom : {{prenom}}</p>
-                <p>Nom : {{nom}}</p>
-                <p>Email : {{mail}}</p>
-                <p>Description : {{txt}}</p>
-            </div>
+                <h2>Résultat</h2>
+                <div class="Tab">
+                    <p>Prénom : {{ prenom }}</p>
+                    <p>Nom : {{ nom }}</p>
+                    <p>Username : {{ username }}</p>
+                </div>
             </div>
             </article>
             <button v-if="CheckButtom" v-on:click="envoiForm" class="btn">Envoyer</button>
@@ -47,8 +42,7 @@ export default {
     return {
       prenom: '',
       nom: '',
-      mail: '',
-      txt: '',
+      username: '',
       infoSubmit: false,
       CheckButtom: true
     }
@@ -67,6 +61,9 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+    margin-top: 70px;
+}
 .form-group {
     display:inline-block;
     width: 60%;
@@ -93,15 +90,16 @@ export default {
     border-radius: .25rem;
 }
 .resultat {
+    padding: 20px;
     margin: 3em 0 0 0;
     display: inline-block;
     width: 60%;
     height: 300px;
     font-size: larger;
-    border: solid grey;
+    border: solid #24ff66;
 }
 .Tab {
     padding: 0 0 0 1em;
-    color:rgb(102, 102, 102);
+    color:#666666;
 }
 </style>
