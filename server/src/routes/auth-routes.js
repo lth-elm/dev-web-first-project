@@ -30,7 +30,7 @@ router.post('/token', (req, res) => {
         login: body.login,
     }
 
-    const token = tokenUtils.sign(payload)
+    const token = tokenUtils.createToken(payload)
 
     res.json({
         success: true,
