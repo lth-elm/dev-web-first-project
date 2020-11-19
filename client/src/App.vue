@@ -43,6 +43,22 @@
   <router-view/>
 </template>
 
+<script>
+export default {
+  name: 'App',
+
+  data () {
+    return {
+      token: false,
+    }
+  },
+
+  mounted () {
+    this.token = localStorage.getItem('token')
+  },
+}
+</script>
+
 <style>
 html {
     font-family : 'Baloo Tammudu 2', cursive, Calibri, Arial, Verdana, Geneva, Tahoma, sans-serif;
