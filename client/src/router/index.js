@@ -35,7 +35,15 @@ const routes = [
   {
     path: '/cryptomonnaie',
     name: 'Crypto',
-    component: Crypto
+    component: Crypto,
+    beforeEnter (to, from, next) {
+      const token = localStorage.getItem('token')
+      if (token) {
+        next(true)
+        return
+      }
+      next({ name: 'Sign' })
+    }
   }
 ]
 
