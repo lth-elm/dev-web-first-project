@@ -1,42 +1,42 @@
 <template>
   <html>
-      <div class="main-header">
-        <header>
-            <div id="main-title">
-                <div id="logo">
-                    <img src="@/assets/images/logo-quickscience-white.png" width="100" height="100" alt="Logo QuickScience" />
-                    <div id="logo-text">
-                        <h1>QuickScience</h1>
-                        <h2 style="font-size: 1em;">Le résumé des news scientifiques à connaitre !</h2>
-                    </div>
+    <div class="main-header">
+      <header>
+        <div id="main-title">
+            <div id="logo">
+                <img src="@/assets/images/logo-quickscience-white.png" width="100" height="100" alt="Logo QuickScience" />
+                <div id="logo-text">
+                    <h1>QuickScience</h1>
+                    <h2 style="font-size: 1em;">Le résumé des news scientifiques à connaitre !</h2>
                 </div>
             </div>
-            <nav>
-                <ul>
-                    <li><router-link :to="{ name: 'Home' }"><i class="fas fa-home"></i></router-link></li>
-                    <li><a href="#">Informatique <i class="fas fa-sort-down"></i></a>
-                        <ul class="drop">
-                            <li><router-link :to="{ name: 'BrainstormInfo' }">Brainstorming</router-link></li>
-                            <li><router-link :to="{ name: 'Csharp' }">C#</router-link></li>
-                          </ul>
-                    </li>
-                    <li><a href="#">Finance <i class="fas fa-sort-down"></i></a>
-                        <ul class="drop">
-                            <li><a href="#">Marché financier</a></li>
-                            <li><router-link :to="{ name: 'Crypto' }">Cryptomonnaie</router-link></li>
-                          </ul>
-                    </li>
-                    <li><a href="#">Physique <i class="fas fa-sort-down"></i></a>
-                        <ul class="drop">
-                            <li><router-link :to="{ name: 'PhysiqueMemo' }">Memo Physique</router-link></li>
-                            <li><a href="#">Physique 2</a></li>
-                          </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div id="sign-in">
-                <router-link :to="{ name: 'Sign' }">Sign In<i class="fas fa-sign-in-alt"></i></router-link>
-            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><router-link :to="{ name: 'Home' }"><i class="fas fa-home"></i></router-link></li>
+                <li><a href="#">Informatique <i class="fas fa-sort-down"></i></a>
+                    <ul class="drop">
+                        <li><router-link :to="{ name: 'BrainstormInfo' }">Brainstorming</router-link></li>
+                        <li><router-link :to="{ name: 'Csharp' }">C#</router-link></li>
+                        </ul>
+                </li>
+                <li><a href="#">Finance <i class="fas fa-sort-down"></i></a>
+                    <ul class="drop">
+                        <li><a href="#">Marché financier</a></li>
+                        <li><router-link :to="{ name: 'Crypto' }">Cryptomonnaie</router-link></li>
+                        </ul>
+                </li>
+                <li><a href="#">Physique <i class="fas fa-sort-down"></i></a>
+                    <ul class="drop">
+                        <li><router-link :to="{ name: 'PhysiqueMemo' }">Memo Physique</router-link></li>
+                        <li><a href="#">Physique 2</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="sign-in">
+            <router-link :to="{ name: 'Sign' }">Sign In<i class="fas fa-sign-in-alt"></i></router-link>
+        </div>
         </header>
     </div>
   </html>
@@ -49,7 +49,7 @@ export default {
 
   data () {
     return {
-      token: false,
+      token: false
     }
   },
 
