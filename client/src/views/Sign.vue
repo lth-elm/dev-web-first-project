@@ -1,37 +1,37 @@
 <template>
     <main>
-            <article>
-                <h1>Sign In/Up</h1>
-            <form>
-                <div class="form-group">
-                    <label for="prenom">Prénom</label>
-                    <input v-model="prenom" v-on:input="refaire" type="text" id="prenom" class="form-control" placeholder="Prénom">
-                </div>
+      <article>
+          <h1>Sign In/Up</h1>
+      <form>
+          <div class="form-group">
+              <label for="prenom">Prénom</label>
+              <input v-model="prenom" v-on:input="refaire" type="text" id="prenom" class="form-control" placeholder="Prénom">
+          </div>
 
-                <div class="form-group">
-                    <label for="nom">Nom</label>
-                    <input v-model="nom" v-on:input="refaire" type="text" id="nom" class="form-control" placeholder="Nom">
-                </div>
+          <div class="form-group">
+              <label for="nom">Nom</label>
+              <input v-model="nom" v-on:input="refaire" type="text" id="nom" class="form-control" placeholder="Nom">
+          </div>
 
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input v-model="username" v-on:input="refaire" type="username" id="username" class="form-control" placeholder="Username">
-                </div>
-                <div class="form-group">
-                    <label for="cle">Mot de passe</label>
-                    <input type="password" v-on:input="refaire" id="cle" class="form-control" placeholder="Mot de Passe">
-                </div>
-            </form>
-            <div v-if="infoSubmit" class="resultat">
-                <h2>Résultat</h2>
-                <div class="Tab">
-                    <p>Prénom : {{ prenom }}</p>
-                    <p>Nom : {{ nom }}</p>
-                    <p>Username : {{ username }}</p>
-                </div>
-            </div>
-            </article>
-            <button v-if="CheckButtom" v-on:click="envoiForm" class="btn">Envoyer</button>
+          <div class="form-group">
+              <label for="username">Username</label>
+              <input v-model="username" v-on:input="refaire" type="username" id="username" class="form-control" placeholder="Username">
+          </div>
+          <div class="form-group">
+              <label for="cle">Mot de passe</label>
+              <input type="password" v-on:input="refaire" id="cle" class="form-control" placeholder="Mot de Passe">
+          </div>
+      </form>
+      <div v-if="infoSubmit" class="resultat">
+          <h2>Résultat</h2>
+          <div class="Tab">
+              <p>Prénom : {{ prenom }}</p>
+              <p>Nom : {{ nom }}</p>
+              <p>Username : {{ username }}</p>
+          </div>
+      </div>
+      </article>
+      <button v-if="CheckButtom" v-on:click="envoiForm" class="btn">Envoyer</button>
     </main>
 </template>
 
@@ -59,12 +59,12 @@ export default {
       fetch('/api/v1/auth/token', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           username,
-          password,
-        }),
+          password
+        })
       })
         .then(res => res.json())
         .then(({ success, token, message }) => {
