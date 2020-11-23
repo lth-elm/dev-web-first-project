@@ -29,7 +29,7 @@
                 <li><a href="#">Physique <i class="fas fa-sort-down"></i></a>
                     <ul class="drop">
                         <li><router-link :to="{ name: 'PhysiqueMemo' }">Memo Physique</router-link></li>
-                        <li><a href="#">Physique 2</a></li>
+                        <li><router-link :to="{ name: 'SecretPhysique' }">Secret Physique</router-link></li>
                         </ul>
                 </li>
             </ul>

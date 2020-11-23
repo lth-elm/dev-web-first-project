@@ -5,6 +5,7 @@ import Csharp from '../views/Csharp.vue'
 import PhysiqueMemo from '../views/PhysiqueMemo.vue'
 import Sign from '../views/Sign.vue'
 import Crypto from '../views/Crypto.vue'
+import SecretPhysique from '../views/SecretPhysique.vue'
 
 const routes = [
   {
@@ -44,6 +45,11 @@ const routes = [
       }
       next({ name: 'Sign' })
     }
+  },
+  {
+    path: '/secret-physique',
+    name: 'SecretPhysique',
+    component: SecretPhysique
   }
 ]
 
