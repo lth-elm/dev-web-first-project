@@ -39,8 +39,8 @@
         </div>
         </header>
     </div>
-  </html>
   <router-view/>
+  </html>
 </template>
 
 <script>
