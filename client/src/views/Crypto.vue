@@ -33,6 +33,7 @@
               </tbody>
             </table>
           </div>
+          <p><i>* Valeurs obtenu à partir de l'API de <a href="https://coinmarketcap.com/fr/" target="_blank">Coin Market Cap</a></i></p>
         </article>
       </div>
     </main>
