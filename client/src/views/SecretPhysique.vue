@@ -7,7 +7,7 @@
                 <p>rien</p>
                 <p>sur cette page</p>
                 <p>...</p>
-                <p v-on:click="display">Ou peut être que si</p>
+                <p v-on:click="display" class="maybe">Ou peut être que si</p>
                 <p>/!\   /!\   /!\</p>
             </div>
         <br>
@@ -42,16 +42,16 @@ export default {
   display: inline;
   text-align: center;
 }
-.Trooll {
-  cursor: default;
-}
 .Trooll >p {
   margin: 20px;
   padding: 0;
   font-size: 200%;
 }
+.maybe {
+  cursor: default;
+}
 .textecache {
-    color :#ff1596;
+  color :#ff1596;
   font-size: 150%;
 }
 </style>
