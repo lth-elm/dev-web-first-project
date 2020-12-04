@@ -22,7 +22,7 @@
                 </li>
                 <li><a href="#">Finance <i class="fas fa-sort-down"></i></a>
                     <ul class="drop">
-                        <li><a href="#">Marché financier</a></li>
+                        <li><router-link :to="{ name: 'MarcheFinancier' }">Marché Financier</router-link></li>
                         <li><router-link :to="{ name: 'Crypto' }">Cryptomonnaie</router-link></li>
                         </ul>
                 </li>

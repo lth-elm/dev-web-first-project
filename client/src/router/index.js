@@ -6,6 +6,7 @@ import PhysiqueMemo from '../views/PhysiqueMemo.vue'
 import Sign from '../views/Sign.vue'
 import Crypto from '../views/Crypto.vue'
 import SecretPhysique from '../views/SecretPhysique.vue'
+import MarcheFinancier from '../views/MarcheFinancier.vue'
 
 const routes = [
   {
@@ -45,6 +46,11 @@ const routes = [
       }
       next({ name: 'Sign' })
     }
+  },
+  {
+    path: '/marche-financier',
+    name: 'MarcheFinancier',
+    component: MarcheFinancier
   },
   {
     path: '/secret-physique',
