@@ -1,19 +1,20 @@
 <template>
   <div class="marche-financier">
     <main>
-      <h1 id="theme">Marché Financier</h1>
+      <h1 id="theme">Finance</h1>
       <!-- <h3>{{info}}</h3> -->
       <div class="main">
         <article>
-          <h2>Ici vous allez voir que quelques actions New yorkaises (NYSE,NASDAQ)</h2>
+          <h1>Marchés Financier</h1>
+          <h2>Actions New yorkaises (NYSE,NASDAQ)</h2>
           <div class="structure">
               <div v-bind:key="index" v-for="(currencies,index) in info">
                 <div class="description">
                   <p>{{tabtext[index]}}</p>
                 </div>
                 <div class="currency">
-                  <p>Entreprise : {{tableau[index]}}</p>
-                  <p>Symbol : {{currencies.symbol}}</p>
+                  <p style="font-weight: bold">Entreprise : {{tableau[index]}}</p>
+                  <p>Ticker : {{currencies.symbol}}</p>
                   <p>Fermeture : {{currencies.close}}</p>
                   <p>Plus Haut : {{currencies.high}}</p>
                   <p>Plus bas : {{currencies.low}}</p>
@@ -25,11 +26,14 @@
           </div>
           <br>
           <br>
+          <br>
           <div class="details">
-            <p>"L'API vient de MarketStack : "</p>
-            <p>"Your subscription: Free Plan"</p>
-            <p>"Il se peut que l'API affiche une erreur 403"</p>
-            <p>Access Restricted- Your current Subscription Plan does not support HTTPS Encryption !!!!</p>
+            <p>API provenant de <a href="https://marketstack.com/" target="_blank">marketstack</a></p>
+            <br>
+            <p><i>"Your subscription: Free Plan"</i></p>
+            <br>
+            <p>Il se peut que l'API affiche une erreur 403</p>
+            <p><i>"Access Restricted- Your current Subscription Plan does not support HTTPS Encryption"</i></p>
             <p>Donc il faut patienter environs 30sec et réactualiser</p>
           </div>
         </article>
@@ -94,6 +98,7 @@ export default {
   font-size: 80%;
 }
 .details {
+  padding: 15px;
   border: solid rgb(128, 49, 49);
   width: 50%;
 }
