@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5">
+  <div class="brainstorm">
     <main>
       <h1 id="theme">Informatique</h1>
       <div class="card">

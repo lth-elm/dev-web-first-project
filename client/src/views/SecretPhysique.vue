@@ -1,5 +1,5 @@
 <template>
-    <div class="TopSecret">
+    <div class="secret-physique">
         <h1 id="theme">Secret Physique</h1><p>.</p>
         <main>
             <div class="Trooll">

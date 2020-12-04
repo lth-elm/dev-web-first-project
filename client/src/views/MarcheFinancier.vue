@@ -1,5 +1,5 @@
 <template>
-  <div class="Market">
+  <div class="marche-financier">
     <main>
       <h1 id="theme">Marché Financier</h1>
       <!-- <h3>{{info}}</h3> -->

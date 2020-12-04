@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5">
+  <div class="Crypto">
     <main>
       <h1 id="theme">Finance</h1>
       <div class="main">

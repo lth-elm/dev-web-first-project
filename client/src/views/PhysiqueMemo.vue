@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5">
+  <div class="physiquememo">
     <main>
       <h1 id="theme">Physique</h1>
       <div class="main">
