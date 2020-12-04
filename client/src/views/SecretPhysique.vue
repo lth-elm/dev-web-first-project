@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-.TopSecret {
+.secret-physique {
   display: inline;
   text-align: center;
 }
