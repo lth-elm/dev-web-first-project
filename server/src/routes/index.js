@@ -11,6 +11,6 @@ const router = new express.Router()
 
 router.use('/auth', authRoutes)
 router.use('/langagesinfo', langagesinfoRoutes)
-router.use('/currencies', currenciesRoutes)
+router.use('/currencies', verifyToken, currenciesRoutes)
 
 module.exports = router
