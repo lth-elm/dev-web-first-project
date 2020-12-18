@@ -2,7 +2,7 @@
     <main>
       <article>
           <h1>Sign In/Up</h1>
-      <form>
+      <form  v-on:submit.prevent="envoiForm">
           <div class="form-group">
               <label for="prenom">Prénom</label>
               <input v-model="prenom" v-on:input="refaire" type="text" id="prenom" class="form-control" placeholder="Prénom">
@@ -19,8 +19,9 @@
           </div>
           <div class="form-group">
               <label for="cle">Mot de passe</label>
-              <input type="password" v-on:input="refaire" id="cle" class="form-control" placeholder="Mot de Passe">
+              <input v-model="password" type="password" v-on:input="refaire" id="cle" class="form-control" placeholder="Mot de Passe">
           </div>
+      <button v-if="CheckButtom" type="submit" class="btn">Envoyer</button>
       </form>
       <div v-if="infoSubmit" class="resultat">
           <h2>Résultat</h2>
@@ -31,7 +32,6 @@
           </div>
       </div>
       </article>
-      <button v-if="CheckButtom" v-on:click="envoiForm" class="btn">Envoyer</button>
     </main>
 </template>
 
@@ -121,5 +121,23 @@ h1 {
 .Tab {
     padding: 0 0 0 1em;
     color:#666666;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  user-select: none;
+  background-color: #265ac9;
+  color: #fff;
+}
+button:hover {
+  background-color: #083699;
 }
 </style>
