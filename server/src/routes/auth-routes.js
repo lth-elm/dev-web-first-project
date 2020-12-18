@@ -10,15 +10,16 @@ router.post('/token', (req, res) => {
 
     const body = req.body
 
-    if (!body || !body.login || !body.password) {
-        res.json({
+    if (!body || !body.username || !body.password) {
+        res.status(401)
+        .json({
             success: false,
             message: 'Login and password are required'
         })
         return
     }
 
-    if (body.password !== authorizedPasswd || body.login !== authorizedLogin) {
+    if (body.password !== authorizedPasswd || body.username !== authorizedLogin) {
         res.json({
             success: false,
             message: 'Invalid credentials'
@@ -27,12 +28,13 @@ router.post('/token', (req, res) => {
     }
 
     const payload = {
-        login: body.login,
+        username: body.username,
     }
 
     const token = tokenUtils.createToken(payload)
 
-    res.json({
+    res.status(201)
+    .json({
         success: true,
         token
     })
