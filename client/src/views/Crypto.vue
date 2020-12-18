@@ -53,7 +53,12 @@ export default {
   },
   methods: {
     getCrypto () {
-      fetch('/api/v1/currencies/top10')
+      const token = localStorage.getItem('token')
+      fetch('/api/v1/currencies/top10', {
+        headers: {
+          Authorization: 'Bearer ' + token
+        }
+      })
         .then(res => res.json())
         .then(data => { this.cryptomonnaies = data.currencies })
         .catch(error => { this.error = error })
