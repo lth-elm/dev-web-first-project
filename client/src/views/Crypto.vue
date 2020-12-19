@@ -16,6 +16,7 @@
             <table class="styled-table">
               <thead>
                   <tr>
+                      <th>Fav</th>
                       <th>Rank</th>
                       <th>Name</th>
                       <th>Price</th>
@@ -26,6 +27,20 @@
                     v-for="crypto in cryptomonnaies"
                     :key="crypto"
                   >
+                    <td>
+                      <div class="not-fav"
+                        v-if="!favorites.includes(crypto)"
+                        @click="addToFavorites(crypto)"
+                      >
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="fav"
+                        v-if="favorites.includes(crypto)"
+                        @click="removeFromFavorites(crypto)"
+                      >
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </td>
                     <td>{{cryptomonnaies.indexOf(crypto) + 1}}</td>
                     <td>{{crypto.name}}</td>
                     <td>$ {{crypto.price}}</td>
@@ -45,28 +60,37 @@
 import Foot from '../components/foot.vue'
 export default {
   name: 'Crypto',
+
   data () {
     return {
       cryptomonnaies: [],
-      error: ''
-    }
-  },
-  methods: {
-    getCrypto () {
-      const token = localStorage.getItem('token')
-      fetch('/api/v1/currencies/top10', {
-        headers: {
-          Authorization: 'Bearer ' + token
-        }
-      })
-        .then(res => res.json())
-        .then(data => { this.cryptomonnaies = data.currencies })
-        .catch(error => { this.error = error })
+      error: '',
+      favorites: []
     }
   },
 
-  created () {
-    this.getCrypto()
+  mounted () {
+    this.favorites = JSON.parse(localStorage.getItem('favorites')) || []
+    const token = localStorage.getItem('token')
+    fetch('/api/v1/currencies/top10', {
+      headers: {
+        Authorization: 'Bearer ' + token
+      }
+    })
+      .then(res => res.json())
+      .then(data => { this.cryptomonnaies = data.currencies })
+      .catch(error => { this.error = error })
+  },
+
+  methods: {
+    addToFavorites (slug) {
+      this.favorites.push(slug)
+      localStorage.setItem('favorites', JSON.stringify(this.favorites))
+    },
+    removeFromFavorites (slug) {
+      this.favorites = this.favorites.filter(favSlug => favSlug !== slug)
+      localStorage.setItem('favorites', JSON.stringify(this.favorites))
+    }
   },
 
   components: {
@@ -94,6 +118,10 @@ export default {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
+}
+
+.fav {
+  color: #009879;
 }
 
 .styled-table th,
