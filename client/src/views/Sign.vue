@@ -1,18 +1,9 @@
 <template>
     <main>
       <article>
-          <h1>Sign In/Up</h1>
+          <h1>Sign In</h1>
+          <p class="sign"><i class="fas fa-user-plus"></i> &nbsp; <router-link :to="{ name: 'SignUp' }">Sign Up</router-link></p>
       <form  v-on:submit.prevent="envoiForm">
-          <div class="form-group">
-              <label for="prenom">Prénom</label>
-              <input v-model="prenom" v-on:input="refaire" type="text" id="prenom" class="form-control" placeholder="Prénom">
-          </div>
-
-          <div class="form-group">
-              <label for="nom">Nom</label>
-              <input v-model="nom" v-on:input="refaire" type="text" id="nom" class="form-control" placeholder="Nom">
-          </div>
-
           <div class="form-group">
               <label for="username">Username</label>
               <input v-model="username" v-on:input="refaire" type="username" id="username" class="form-control" placeholder="Username">
@@ -23,13 +14,8 @@
           </div>
       <button v-if="CheckButtom" type="submit" class="btn">Envoyer</button>
       </form>
-      <div v-if="infoSubmit" class="resultat">
-          <h2>Résultat</h2>
-          <div class="Tab">
-              <p>Prénom : {{ prenom }}</p>
-              <p>Nom : {{ nom }}</p>
-              <p>Username : {{ username }}</p>
-          </div>
+      <div v-if="infoSubmit" class="connecte">
+          <p>Connecté en tant que {{ username }} &nbsp; <i class="fas fa-check-circle"></i></p>
       </div>
       </article>
     </main>
@@ -40,8 +26,6 @@ export default {
   name: 'Sign',
   data () {
     return {
-      prenom: '',
-      nom: '',
       username: '',
       password: '',
       infoSubmit: false,
@@ -84,6 +68,12 @@ export default {
 h1 {
     margin-top: 70px;
 }
+.sign {
+    color: #265ac9;
+}
+.sign a {
+    color: #265ac9;
+}
 .form-group {
     display:inline-block;
     width: 60%;
@@ -109,18 +99,8 @@ h1 {
     border: 1px solid #ced4da;
     border-radius: .25rem;
 }
-.resultat {
-    padding: 20px;
-    margin: 3em 0 0 0;
-    display: inline-block;
-    width: 60%;
-    height: 300px;
-    font-size: larger;
-    border: solid #24ff66;
-}
-.Tab {
-    padding: 0 0 0 1em;
-    color:#666666;
+.connecte {
+    color: #265ac9;
 }
 form {
   display: flex;
