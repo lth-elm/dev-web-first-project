@@ -34,8 +34,14 @@
                 </li>
             </ul>
         </nav>
-        <div id="sign-in">
-            <router-link :to="{ name: 'Sign' }">Sign In<i class="fas fa-sign-in-alt"></i></router-link>
+        <div id="sign-in-out" v-if="!token">
+            <router-link :to="{ name: 'Sign' }">Sign In &nbsp;<i class="fas fa-sign-in-alt"></i></router-link>
+        </div>
+        <div id="sign-in-out"
+          v-if="token"
+          @click="removeToken()"
+        >
+            <router-link :to="{ name: 'Home' }">Sign Out &nbsp;<i class="fas fa-sign-out-alt"></i></router-link>
         </div>
         </header>
     </div>
@@ -55,6 +61,12 @@ export default {
 
   mounted () {
     this.token = localStorage.getItem('token')
+  },
+
+  methods: {
+    removeToken () {
+      localStorage.removeItem('token')
+    }
   }
 }
 </script>
@@ -102,13 +114,13 @@ header {
 
 /* SIGN-IN and NAV */
 
-#sign-in a {
+#sign-in-out a {
     margin-right: 60px;
     color: #6fffdb;
     text-decoration: none;
 }
 
-#sign-in a:hover {
+#sign-in-out a:hover {
     color: #ffd59e;
 }
 
