@@ -5,19 +5,19 @@
       <div class="main">
           <article>
               <h1>Bienvenue sur QuickScience !</h1>
-              <p>Le site est composé de 5 modules :</p>
-              <h2>Home</h2>
+              <h2>Le site est composé de 5 modules :</h2>
+              <h3>Home</h3>
               <p>Page d'accueil où sont listées des informations concernant le site ainsi que toutes les ressources utilisés.</p>
-              <h2>Informatique</h2>
+              <h3>Informatique</h3>
               <p><router-link :to="{ name: 'BrainstormInfo' }">Brainstorming</router-link> est une page où l'utilisateur peut écrire et ainsi lister tous les langages informatique qu'il connait. 4 langages sont déja pré-remplis puis 3 autres sont récupérés depuis le serveur. Il est également possible de supprimer un langage de la liste si une erreur a eu lieu ou autres raison.</p>
               <p>La page <router-link :to="{ name: 'Csharp' }">C#</router-link> est quant à elle une page éducative afin d'en apprendre plus sur ce langage. Une navigation sur le côté permet de se rendre directement au sujet qui nous intéresse.</p>
-              <h2>Finance</h2>
+              <h3>Finance</h3>
               <p>Sur la page <router-link :to="{ name: 'MarcheFinancier' }">marché financier</router-link> sont répertoriés les cours actuels du NYSE (bourse New-Yorkaise) accompagné d'un descriptif obtenu avec l'API de <i>Marketstack</i></p>
               <p>De même, la page <router-link :to="{ name: 'Crypto' }">cryptomonnaie</router-link> liste le top 10 des cryptomonnaies actuels selon <i>CoinMarketCap</i> ainsi que leurs prix. <strong>Attention, cette page n'est accessible qu'une fois connecté</strong>. Pour cela vous pouvez renseigner <strong>"crypto-master"</strong> comme identifiant et <strong>"53CR37!"</strong> comme mot de passe. Une fois connecté vous pourrez accéder à ces données et ajouter les cryptos que vous souhaitez en favoris.</p>
-              <h2>Physique</h2>
+              <h3>Physique</h3>
               <p><router-link :to="{ name: 'PhysiqueMemo' }">Mémo</router-link> contient 2 petites devinettes sous la forme d'un "qui est-ce ?" dont la réponse est accessible.</p>
               <p><router-link :to="{ name: 'SecretPhysique' }">Secret Physique</router-link> est une page qui ne contient rien à première vue. Toutefois, un secret physique sera révélé si l'utilisateur effectue une manipulation précise...</p>
-              <h2>Sign in/out</h2>
+              <h3>Sign in/out</h3>
               <p>Pour <router-link :to="{ name: 'Sign' }">se connecter</router-link>, entrer l'identifiant et le mot de passe par défaut à savoir : <strong>"crypto-master"</strong> et <strong>"53CR37!"</strong> afin d'avoir notamment accès à la page "Cryptomonnaie". La page <router-link :to="{ name: 'SignUp' }">d'enregistrement</router-link> ne permet malhereusement pas encore d'enregistrer ses identifiants.</p>
               <p><i>* Veuillez rafraichir la page une fois vous être connecté ou déconnecté.</i></p>
           </article>
