@@ -34,7 +34,7 @@
             <br>
             <p>Il se peut que l'API affiche une erreur 403</p>
             <p><i>"Access Restricted- Your current Subscription Plan does not support HTTPS Encryption"</i></p>
-            <p>Donc il faut patienter environs 30sec et réactualiser</p>
+            <p>Il faut alors patienter environs 30sec et réactualiser</p>
           </div>
         </article>
       </div>
