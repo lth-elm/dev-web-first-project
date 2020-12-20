@@ -16,6 +16,8 @@
       </form>
       <div v-if="infoSubmit" class="connecte">
           <p>Connecté en tant que {{ username }} &nbsp; <i class="fas fa-check-circle"></i></p>
+          <br>
+          <p><i>* Veuillez rafraichir la page une fois vous être connecté ou déconnecté.</i></p>
       </div>
       </article>
     </main>
