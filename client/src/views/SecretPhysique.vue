@@ -22,7 +22,7 @@ export default {
   name: 'SecretPhysique',
   data () {
     return {
-      Textecache: 'Effectivement, ce texte était caché, mais il n\'est pas pertinent pour l\'instant',
+      Textecache: 'Le « lamphone » est une ingénieuse technique d’espionnage : elle consiste à observer les infimes variations de luminosité d’une ampoule causées par les vibrations sonores, et, grâce à un traitement informatique, de reconstituer les conversations (ou les autres sons) à l’origine de ces variations.',
       show: false
     }
   },
