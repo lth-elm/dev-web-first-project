@@ -44,7 +44,6 @@ export default {
       const payload = { username, password }
 
       this.$store.dispatch('login', payload)
-
       // fetch('/api/v1/auth/token', {
       //   method: 'POST',
       //   headers: {
