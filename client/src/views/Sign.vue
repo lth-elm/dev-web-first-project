@@ -41,22 +41,25 @@ export default {
 
       const username = this.username
       const password = this.password
+      const payload = { username, password }
 
-      fetch('/api/v1/auth/token', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          username,
-          password
-        })
-      })
-        .then(res => res.json())
-        .then(({ success, token, message }) => {
-          localStorage.setItem('token', token)
-        })
-        .catch(error => { this.error = error })
+      this.$store.dispatch('login', payload)
+
+      // fetch('/api/v1/auth/token', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify({
+      //     username,
+      //     password
+      //   })
+      // })
+      //   .then(res => res.json())
+      //   .then(({ success, token, message }) => {
+      //     localStorage.setItem('token', token)
+      //   })
+      //   .catch(error => { this.error = error })
     },
     refaire: function () {
       this.infoSubmit = false

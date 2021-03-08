@@ -53,14 +53,10 @@
 export default {
   name: 'App',
 
-  data () {
-    return {
-      token: false
+  computed: {
+    token () {
+      return this.$store.state.token
     }
-  },
-
-  mounted () {
-    this.token = localStorage.getItem('token')
   },
 
   methods: {
