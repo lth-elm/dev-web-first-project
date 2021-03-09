@@ -25,7 +25,7 @@ export default createStore({
           localStorage.setItem('token', token)
           commit('setUser', token)
         })
-    }
+    },
     // ,
     // checkToken (actionObject) {
     //   const token = localStorage.getItem('token')
@@ -39,10 +39,10 @@ export default createStore({
     //       actionObject.commit('setUser', data.user)
     //     })
     // },
-    // logout (actionObject) {
-    //   actionObject.commit('resetUser')
-    //   localStorage.removeItem('token')
-    // }
+    logout ({ commit }) {
+      localStorage.removeItem('token')
+      commit('resetUser')
+    }
   },
   modules: {
   }

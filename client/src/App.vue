@@ -61,7 +61,7 @@ export default {
 
   methods: {
     removeToken () {
-      localStorage.removeItem('token')
+      this.$store.dispatch('logout')
     }
   }
 }

@@ -19,7 +19,6 @@
               <p><router-link :to="{ name: 'SecretPhysique' }">Secret Physique</router-link> est une page qui ne contient rien à première vue. Toutefois, un secret physique sera révélé si l'utilisateur effectue une manipulation précise...</p>
               <h3>Sign in/out</h3>
               <p>Pour <router-link :to="{ name: 'Sign' }">se connecter</router-link>, entrer l'identifiant et le mot de passe par défaut à savoir : <strong>"crypto-master"</strong> et <strong>"53CR37!"</strong> afin d'avoir notamment accès à la page "Cryptomonnaie". La page <router-link :to="{ name: 'SignUp' }">d'enregistrement</router-link> ne permet malhereusement pas encore d'enregistrer ses identifiants.</p>
-              <p><i>* Veuillez rafraichir la page une fois vous être connecté ou déconnecté.</i></p>
           </article>
           <aside>
               <h1>Ressources utilisés</h1>

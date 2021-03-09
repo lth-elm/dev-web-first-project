@@ -68,5 +68,3 @@ Secret Physique est une page qui ne contient rien à première vue. Toutefois, u
 ### Sign in/out <a name="sign"></a>
 
 Pour se connecter, entrer l'identifiant et le mot de passe par défaut à savoir : **crypto-master** et **53CR37!** afin d'avoir notamment accès à la page "Cryptomonnaie". La page d'enregistrement ne permet malhereusement pas encore d'enregistrer ses identifiants.
-
-*\* Il faut rafraichir la page une fois vous être connecté ou déconnecté.* 

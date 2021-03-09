@@ -16,8 +16,6 @@
       </form>
       <div v-if="infoSubmit" class="connecte">
           <p>Connecté en tant que {{ username }} &nbsp; <i class="fas fa-check-circle"></i></p>
-          <br>
-          <p><i>* Veuillez rafraichir la page une fois vous être connecté ou déconnecté.</i></p>
       </div>
       </article>
     </main>
@@ -34,8 +32,9 @@ export default {
       CheckButtom: true
     }
   },
+
   methods: {
-    envoiForm: function () {
+    envoiForm () {
       this.infoSubmit = true
       this.CheckButtom = false
 
@@ -44,22 +43,8 @@ export default {
       const payload = { username, password }
 
       this.$store.dispatch('login', payload)
-      // fetch('/api/v1/auth/token', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   },
-      //   body: JSON.stringify({
-      //     username,
-      //     password
-      //   })
-      // })
-      //   .then(res => res.json())
-      //   .then(({ success, token, message }) => {
-      //     localStorage.setItem('token', token)
-      //   })
-      //   .catch(error => { this.error = error })
     },
+
     refaire: function () {
       this.infoSubmit = false
       this.CheckButtom = true
