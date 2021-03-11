@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 const express = require('express')
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 
 const router = require('./routes/index.js')
 
@@ -10,7 +10,8 @@ dotenv.config()
 
 const port = 3000
 
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
+app.use(express.json())
 
 app.use('/api/v1', router)
 
