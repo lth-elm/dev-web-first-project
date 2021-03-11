@@ -34,11 +34,11 @@
                 </li>
             </ul>
         </nav>
-        <div id="sign-in-out" v-if="!token">
+        <div id="sign-in-out" v-if="!isLoggedIn">
             <router-link :to="{ name: 'Sign' }">Sign In &nbsp;<i class="fas fa-sign-in-alt"></i></router-link>
         </div>
         <div id="sign-in-out"
-          v-if="token"
+          v-if="isLoggedIn"
           @click="removeToken()"
         >
             <router-link :to="{ name: 'Home' }">Sign Out &nbsp;<i class="fas fa-sign-out-alt"></i></router-link>
@@ -50,13 +50,16 @@
 </template>
 
 <script>
+import { mapGetters, mapState } from 'vuex'
+
 export default {
   name: 'App',
 
   computed: {
-    token () {
-      return this.$store.state.token
-    }
+    ...mapState({
+      user: state => state.user.data
+    }),
+    ...mapGetters(['isLoggedIn'])
   },
 
   methods: {

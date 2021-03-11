@@ -1,4 +1,5 @@
 const express = require('express')
+const fetch = require('isomorphic-fetch')
 
 const router = new express.Router()
 
@@ -6,51 +7,50 @@ const apiBaseUrl = 'https://pro-api.coinmarketcap.com/v1'
 
 // Fonction réutilisable pour faire des appels à l'API CMC
 function fetchCMC (path) {
-    const apiKey = process.env.CMC_API_KEY
+  const apiKey = process.env.CMC_API_KEY
 
-    return fetch(`${apiBaseUrl}${path}`, {
-        method: "GET",
-        headers: {
-            accept: 'application/json',
-            'x-cmc_pro_api_key': apiKey
-        }
-    })
+  return fetch(`${apiBaseUrl}${path}`, {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      'x-cmc_pro_api_key': apiKey
+    }
+  })
     .then(fetchResponse => {
-        return fetchResponse.json();
+      return fetchResponse.json()
     })
     .then(responseData => {
-        const errorCode = responseData.status.error_code
-        if (errorCode != 0) {
-            throw new Error(responseData.status.error_message)
-        }
-        return responseData.data
+      const errorCode = responseData.status.error_code
+      if (errorCode !== 0) {
+        throw new Error(responseData.status.error_message)
+      }
+      return responseData.data
     })
 }
 
-router.get('/', function getRoot(req, res) {
+router.get('/', function getRoot (req, res) {
+  const path = '/cryptocurrency/listings/latest'
 
-    const path = '/cryptocurrency/listings/latest'
-
-    fetchCMC(path)
+  fetchCMC(path)
     .then(currencies => {
-        res.json({
-            success: true,
-            currencies: currencies.map(currency => ({
-                id: currency.id,
-                name: currency.name,
-                slug: currency.slug,
-                quote: currency.quote,
-            })),
-        })
+      res.json({
+        success: true,
+        currencies: currencies.map(currency => ({
+          id: currency.id,
+          name: currency.name,
+          slug: currency.slug,
+          quote: currency.quote
+        }))
+      })
     })
     .catch(error => {
-        res.json({
-            success: false,
-            message: error.message
-        })
+      res.json({
+        success: false,
+        message: error.message
+      })
     })
 
-    /*
+  /*
     fetchCMC('/cryptocurrency/listings/latest')
     .catch(error => {
         res.json({
@@ -68,44 +68,43 @@ router.get('/', function getRoot(req, res) {
     */
 })
 
-router.get('/top10', function getRoot(req, res) {
+router.get('/top10', function getRoot (req, res) {
+  const path = '/cryptocurrency/listings/latest'
 
-    const path = '/cryptocurrency/listings/latest'
-
-    fetchCMC(path)
+  fetchCMC(path)
     .then(currencies => {
-        res.json({
-            success: true,
-            currencies: currencies.slice(0, 10).map(currency => {
-                return { name : currency.name, price: currency.quote.USD.price.toFixed(2) }
-            })
+      res.json({
+        success: true,
+        currencies: currencies.slice(0, 10).map(currency => {
+          return { name: currency.name, price: currency.quote.USD.price.toFixed(2) }
         })
+      })
     })
     .catch(error => {
-        res.json({
-            success: false,
-            message: error.message
-        })
+      res.json({
+        success: false,
+        message: error.message
+      })
     })
 })
 
-router.get('/:currencyslug', function getRoot(req, res) {
-    const crypto = req.params.currencyslug
+router.get('/:currencyslug', function getRoot (req, res) {
+  const crypto = req.params.currencyslug
 
-    const path = '/cryptocurrency/info?slug=' + crypto
+  const path = '/cryptocurrency/info?slug=' + crypto
 
-    fetchCMC(path)
+  fetchCMC(path)
     .then(crypto => {
-        res.json({
-            success: true,
-            crypto
-        })
+      res.json({
+        success: true,
+        crypto
+      })
     })
     .catch(error => {
-        res.json({
-            success: false,
-            message: error.message
-        })
+      res.json({
+        success: false,
+        message: error.message
+      })
     })
 })
 

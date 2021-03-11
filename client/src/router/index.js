@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { checkTokenBeforeEnter } from './router-utils'
+
 import Home from '../views/Home.vue'
 import BrainstormInfo from '../views/BrainstormInfo.vue'
 import Csharp from '../views/Csharp.vue'
@@ -39,14 +41,7 @@ const routes = [
     path: '/cryptomonnaie',
     name: 'Crypto',
     component: Crypto,
-    beforeEnter (to, from, next) {
-      const token = localStorage.getItem('token')
-      if (token) {
-        next(true)
-        return
-      }
-      next({ name: 'Sign' })
-    }
+    beforeEnter: checkTokenBeforeEnter
   },
   {
     path: '/marche-financier',

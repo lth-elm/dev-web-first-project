@@ -1,5 +1,4 @@
 const express = require('express')
-// const fetch = require('isomorphic-fetch')
 
 const langagesinfoRoutes = require('./langagesinfo-routes.js')
 const currenciesRoutes = require('./currencies-routes.js')

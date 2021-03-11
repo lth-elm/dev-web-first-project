@@ -1,39 +1,12 @@
-const apiPaths = {
-  loginUrl: '/auth/token',
-  checkToken: '/user'
-}
+import apiRoutes from './api-routes'
+import jsonClient from './api-client'
 
-const jsonClient = (url, options) => fetch(
-  '/api/v1' + url,
-  {
-    ...options,
-    headers: {
-      ...options.headers,
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify(options.body)
-  })
-  .then(res => res.json())
-
-const api = {
+export default {
   login (credentials) {
-    return jsonClient(
-      apiPaths.loginUrl,
-      {
-        method: 'post',
-        body: credentials
-      }
-    )
+    return jsonClient.post(apiRoutes.login, { body: credentials })
   },
-  checkToken () {
-    const token = localStorage.getItem('token')
-    return jsonClient(apiPaths.checkTokenUrl, {
-      headers: {
-        Authorization: 'Bearer ' + token
-      }
-    })
-      .then(data => data.user)
+
+  checkToken (token) {
+    return jsonClient.get(apiRoutes.me, { headers: { Authorization: 'Bearer ' + token } })
   }
 }
-
-export default api
