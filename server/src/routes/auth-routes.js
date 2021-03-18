@@ -4,6 +4,13 @@ const tokenUtils = require('../utils/token-utils.js')
 
 const router = new express.Router()
 
+// In a DATABASE !
+const toLog = {
+  id: 1,
+  login: 'me',
+  password: 'password'
+}
+
 router.post('/token', (req, res) => {
   const authorizedLogin = process.env.AUTHORIZED_LOGIN
   const authorizedPasswd = process.env.AUTHORIZED_PASSWD
@@ -36,6 +43,10 @@ router.post('/token', (req, res) => {
   res.status(201)
     .json({
       success: true,
+      user: {
+        ...toLog,
+        password: undefined
+      },
       token
     })
 })

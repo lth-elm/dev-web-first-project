@@ -12,6 +12,6 @@ module.exports = {
   },
   checkToken (token) {
     const secret = process.env.SECRET || '53CR37!'
-    jwt.verify(token, secret)
+    return jwt.verify(token, secret)
   }
 }
