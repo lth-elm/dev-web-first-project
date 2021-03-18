@@ -49,7 +49,7 @@ Page d'accueil où sont listées des informations concernant le site ainsi que t
 
 ### Informatique <a name="info"></a>
 
-Brainstorming est une page où l'utilisateur peut écrire et ainsi lister tous les langages informatique qu'il connait. 4 langages sont déja pré-remplis puis 3 autres sont récupérés depuis le serveur via le chemin `http://localhost:3000/api/v1//langagesinfo`. Il est également possible de supprimer un langage de la liste si une erreur a eu lieu ou autres raison.
+Brainstorming est une page où l'utilisateur peut écrire et ainsi lister tous les langages informatique qu'il connait. 4 langages sont déja pré-remplis puis 3 autres sont récupérés depuis le serveur via le chemin `http://localhost:3000/api/v1/langagesinfo`. Il est également possible de supprimer un langage de la liste si une erreur a eu lieu ou autres raison.
 
 La page C# est quant à elle une page éducative afin d'en apprendre plus sur ce langage. Une navigation sur le côté permet de se rendre directement au sujet qui nous intéresse.
 
