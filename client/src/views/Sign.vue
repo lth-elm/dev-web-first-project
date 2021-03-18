@@ -26,8 +26,8 @@ export default {
   name: 'Sign',
   data () {
     return {
-      username: '',
-      password: '',
+      username: undefined,
+      password: undefined,
       infoSubmit: false,
       CheckButtom: true
     }
