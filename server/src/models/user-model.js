@@ -1,3 +1,5 @@
+const { hash } = require('../utils/crypto.js')
+
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 
@@ -17,8 +19,8 @@ const UserSchema = new Schema(
       type: String,
       required: [true, "L'adresse email nom est manquante"],
       trim: true,
-      lowercase: true,
-      unique: true
+      lowercase: true
+      // unique: true
     },
     login: {
       type: String,
@@ -31,5 +33,20 @@ const UserSchema = new Schema(
     }
   }
 )
+
+UserSchema.set('toJSON', {
+  ransform (doc, ret) {
+    delete ret.password
+    return ret
+  }
+})
+
+UserSchema.pre('save', function preSave () {
+  const user = this
+  if (!user.isModified('password')) {
+    return
+  }
+  user.password = hash(user.password)
+})
 
 module.exports = mongoose.model('User', UserSchema)
