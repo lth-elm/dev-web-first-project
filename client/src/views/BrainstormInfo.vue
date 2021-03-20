@@ -65,7 +65,7 @@ export default {
       fetch('/api/v1/langagesinfo')
         .then(res => res.json())
         .then(data => {
-          for (var langages of data) {
+          for (const langages of data) {
             this.tableauTaches.push(langages)
           }
         })
