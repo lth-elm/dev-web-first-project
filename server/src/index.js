@@ -1,3 +1,4 @@
+const path = require('path')
 const dotenv = require('dotenv')
 dotenv.config()
 
@@ -10,6 +11,7 @@ const app = express()
 
 const port = 3000
 
+app.use(express.static(path.join(__dirname, 'dist')))
 app.use(express.json())
 
 app.use('/api/v1', router)
