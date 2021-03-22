@@ -14,6 +14,11 @@ router.use('/auth', authRoutes)
 router.use('/langagesinfo', langagesinfoRoutes)
 router.use('/currencies', currenciesRoutes)
 
-router.use('/me', verifyToken)
+router.get('/me', verifyToken, (req, res) => {
+  res.json({
+    success: true,
+    user: {}
+  })
+})
 
 module.exports = router
