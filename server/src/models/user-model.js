@@ -41,12 +41,12 @@ UserSchema.set('toJSON', {
   }
 })
 
-UserSchema.pre('save', function preSave () {
+UserSchema.pre('save', async function preSave () {
   const user = this
   if (!user.isModified('password')) {
     return
   }
-  user.password = hash(user.password)
+  user.password = await hash(user.password)
 })
 
 module.exports = mongoose.model('User', UserSchema)

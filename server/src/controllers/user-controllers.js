@@ -1,10 +1,9 @@
 const { createUser } = require('../models/user-queries.js')
+const { updateUser } = require('../models/user-queries.js')
 
 module.exports = {
   createUserController (req, res) {
-    // Récupérer les données de la requête
-    // (...)
-    // const userData = ...
+    const userData = req.body.user // ???
     // Utiliser createUser des queries
     createUser(userData)
       .then(user => {
@@ -20,11 +19,23 @@ module.exports = {
         })
       })
   },
+
   updateUserController (req, res) {
-    // Récupérer les données de la requête
-    // (...)
-    // const userData = ...
+    const userData = req.body.user
     // Utiliser updateUser des queries
-    // (...)
+    updateUser(userData)
+      .then((user) => {
+        res.json({
+          success: true,
+          user
+        })
+      })
+      .catch(err => {
+        console.error(err)
+        res.status(500).json({
+          success: false,
+          message: 'Impossible de modifier cet utilisateur'
+        })
+      })
   }
 }
