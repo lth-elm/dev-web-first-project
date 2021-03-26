@@ -9,6 +9,7 @@ import Sign from '../views/Sign.vue'
 import Crypto from '../views/Crypto.vue'
 import SecretPhysique from '../views/SecretPhysique.vue'
 import MarcheFinancier from '../views/MarcheFinancier.vue'
+import MyCrypto from '../views/MyCrypto.vue'
 import SignUp from '../views/SignUp.vue'
 
 const routes = [
@@ -52,6 +53,11 @@ const routes = [
     path: '/secret-physique',
     name: 'SecretPhysique',
     component: SecretPhysique
+  },
+  {
+    path: '/my-crypto',
+    name: 'MyCrypto',
+    component: MyCrypto
   },
   {
     path: '/sign-up',

@@ -24,6 +24,7 @@
                     <ul class="drop">
                         <li><router-link :to="{ name: 'MarcheFinancier' }">Marché Financier</router-link></li>
                         <li><router-link :to="{ name: 'Crypto' }">Cryptomonnaie</router-link></li>
+                        <li><router-link :to="{ name: 'MyCrypto' }">Mes Cryptos</router-link></li>
                         </ul>
                 </li>
                 <li><a href="#">Physique <i class="fas fa-sort-down"></i></a>
