@@ -14,16 +14,26 @@
           </div>
       <button v-if="CheckButtom" type="submit" class="btn">Envoyer</button>
       </form>
-      <div v-if="infoSubmit" class="connecte">
-          <p>Connecté en tant que {{ username }} &nbsp; <i class="fas fa-check-circle"></i></p>
+      <div v-if="!isLoggedIn && infoSubmit" class="non-connecte">
+          <p><i class="fas fa-times-circle"></i> Identifiant ou mot de passe invalide, veuillez réessayer.</p>
+      </div>
+      <div v-if="isLoggedIn && infoSubmit" class="connecte">
+          <p><i class="fas fa-check-circle"></i> Connecté en tant que {{ username }}.</p>
       </div>
       </article>
     </main>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'Sign',
+
+  computed: {
+    ...mapGetters(['isLoggedIn'])
+  },
+
   data () {
     return {
       username: undefined,
@@ -90,6 +100,9 @@ h1 {
 }
 .connecte {
     color: #265ac9;
+}
+.non-connecte {
+    color: red;
 }
 form {
   display: flex;
