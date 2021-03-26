@@ -73,7 +73,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .structure {
   width: 80%;
   margin-left: 10%;
