@@ -2,11 +2,11 @@
   <div class="marche-financier">
     <main>
       <h1 id="theme">Finance</h1>
-      <!-- <h3>{{info}}</h3> -->
       <div class="main">
         <article>
           <h1>Marchés Financier</h1>
           <h2>Actions New yorkaises (NYSE,NASDAQ)</h2>
+          <br>
           <div class="structure">
               <div v-bind:key="index" v-for="(currencies,index) in info">
                 <div class="description">
