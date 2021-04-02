@@ -6,8 +6,8 @@
         <article>
           <h1>Memo</h1>
           <h3>{{message}}</h3>
-          <div class="btnDevinette" v-on:click="t1">Devinette 1</div>
-          <div class="btnDevinette" v-on:click="t2">Devinette 2</div>
+          <button v-on:click="t1">Devinette 1</button>
+          <button v-on:click="t2">Devinette 2</button>
 
           <div class="onglets" v-if="toggle1">
             <texte1></texte1>
@@ -16,7 +16,7 @@
             <texte2></texte2>
           </div>
           <modale v-bind:revele="revele" v-bind:toggleModale="toggleModale"></modale>
-          <div v-on:click="toggleModale" class="btn">Réponse</div>
+          <button v-on:click="toggleModale" class="answer">Réponse</button>
         </article>
       </div>
     </main>
@@ -62,23 +62,8 @@ export default {
 </script>
 
 <style scoped>
-.btnDevinette {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  user-select: none;
-  background-color: #265ac9;
-  color: #fff;
+button {
   margin-right: 15px;
-}
-
-.btnDevinette:hover {
-  background-color: #4779e7;
 }
 
 .onglets {
@@ -88,20 +73,11 @@ export default {
   width: 60%;
 }
 
-.btn{
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  user-select: none;
+.answer {
   background-color: rgb(78, 228, 78);
   color: #fff;
 }
-.btn:hover{
+.answer:hover {
   background-color: darkgreen;
 }
 </style>

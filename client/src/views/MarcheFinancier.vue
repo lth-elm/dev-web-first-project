@@ -48,6 +48,7 @@ import Foot from '../components/foot.vue'
 import axios from 'axios'
 export default {
   name: 'MarcheFinancier',
+
   data () {
     return {
       tableau: ['APPLE', 'TESLA', 'Microsoft', 'American Airline Gp', 'Axon Inc', 'Mattel Inc', 'Opthea Ltd', 'Oxford Immunotec', 'Papa John s Intl'],
@@ -63,10 +64,12 @@ export default {
         'Papa John s Pizza est le troisième plus gros restaurateur de pizzas des États-Unis après Pizza Hut et Domino s Pizza. Le siège de la compagnie est basé à Louisville. Le slogan de la société signifie De meilleurs ingrédients, de meilleures pizza.']
     }
   },
+
   mounted () {
     axios.get('http://api.marketstack.com/v1/eod/latest?access_key=490d5c6512308165c3ff386acb13ac1b&symbols=AAPL,TSLA,MSFT,AAL,AAXN,MAT,OPT,OXFD,PZZA')
       .then(response => (this.info = response.data.data))
   },
+
   components: {
     foot: Foot
   }
@@ -78,6 +81,7 @@ export default {
   width: 80%;
   margin-left: 10%;
 }
+
 .currency {
   display: inline-block;
   text-align: center;
@@ -86,10 +90,12 @@ export default {
   padding: 1em;
   border: solid black
 }
+
 .currency >p {
   padding: 0rem;
   margin: 0rem;
 }
+
 .description {
   text-align: left;
   margin-top: 5%;
@@ -97,11 +103,13 @@ export default {
   float:left;
   font-size: 80%;
 }
+
 .details {
   padding: 15px;
   border: solid rgb(128, 49, 49);
   width: 50%;
 }
+
 .details >p{
   margin: 2px;
   padding: 0;

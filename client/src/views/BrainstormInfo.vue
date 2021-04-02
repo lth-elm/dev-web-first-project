@@ -19,7 +19,7 @@
                   <p class="BoxTexte">Certains languages populaires ont été préajoutés.</p>
                   <input v-model="formData.tache" type="text" id="action" class="Entrer">
               </div>
-              <button v-on:click.prevent="creationItem" class="btn">Valider</button>
+              <button v-on:click.prevent="creationItem">Valider</button>
           </form>
           <ul>
           <li v-bind:key="index" v-for="(tache,index) in tableauTaches">
@@ -38,6 +38,7 @@ import Item from '../components/Item.vue'
 import Foot from '../components/foot.vue'
 export default {
   name: 'BrainstormInfo',
+
   data () {
     return {
       formData: {
@@ -47,6 +48,7 @@ export default {
       error: ''
     }
   },
+
   methods: {
     creationItem: function () {
       if (!this.formData.tache) {
@@ -98,6 +100,7 @@ export default {
   margin-bottom: 0.5rem;
   padding: 10px 15px 20px 15px;
 }
+
 .BoxHeader{
   text-align: center;
   padding: .75rem 1.25rem;
@@ -105,10 +108,12 @@ export default {
   background-color: rgba(0,0,0,0.03);
   border-bottom: 1px solid rgba(0,0,0,0.125);
 }
+
 .BoxTitle{
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   text-align: left;
 }
+
 .BoxTexte{
   font-size: 1rem;
   font-weight: 400;
@@ -116,6 +121,7 @@ export default {
   color: #212529;
   text-align: left;
 }
+
 .Entrer{
   width: 50%;
   border-radius: 1rem;
@@ -123,21 +129,5 @@ export default {
   border-color: black;
   height: 20%;
   font-size: larger;
-}
-.btn{
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  user-select: none;
-  background-color: rgb(78, 228, 78);
-  color: #fff;
-}
-.btn:hover{
-  background-color: darkgreen;
 }
 </style>

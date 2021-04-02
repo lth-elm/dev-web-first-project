@@ -66,12 +66,15 @@ export default {
 h1 {
     margin-top: 70px;
 }
+
 .sign {
     color: #265ac9;
 }
+
 .sign a {
     color: #265ac9;
 }
+
 .form-group {
     display:inline-block;
     width: 60%;
@@ -79,10 +82,12 @@ h1 {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
+
 .form-group >label{
     margin-bottom: .5rem;
     font-size: larger;
 }
+
 .form-control {
     display: block;
     width: 100%;
@@ -97,6 +102,7 @@ h1 {
     border: 1px solid #ced4da;
     border-radius: .25rem;
 }
+
 .resultat {
     padding: 20px;
     margin: 1em 0 0 0;
@@ -107,26 +113,18 @@ h1 {
     border: solid #12df4f;
     border-radius: 5px;
 }
+
 .Tab {
     padding: 0 0 0 1em;
     color:#666666;
 }
+
 form {
   display: flex;
   flex-direction: column;
 }
+
 button {
   width: 100px;
-  text-align: center;
-  vertical-align: middle;
-  padding: .375rem .75rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  user-select: none;
-  background-color: #265ac9;
-  color: #fff;
-}
-button:hover {
-  background-color: #083699;
 }
 </style>

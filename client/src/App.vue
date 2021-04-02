@@ -284,4 +284,19 @@ aside a p:hover {
     text-align: center;
     font-weight: bold;
 }
+
+button {
+  text-align: center;
+  vertical-align: middle;
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  user-select: none;
+  background-color: #265ac9;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #083699;
+}
 </style>
