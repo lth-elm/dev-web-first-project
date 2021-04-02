@@ -10,11 +10,8 @@
             <h2>Web 3 Demo</h2>
             <br>
             <div>
-              <button v-on:click="loadWeb3();">Connect to your Metamask if not already done</button>
+              <button v-on:click="load();"><span id="status">Connect to Metamask</span></button>
             </div>
-            <br>
-            <br>
-            <p>Status : <span id="status">Waiting for a Metamask connection...</span></p>
           </div>
         </article>
       </div>
@@ -40,9 +37,7 @@ export default {
 
     load: async function () {
       await this.loadWeb3()
-      // window.address = await loadAddress()
-      console.log('Loaded')
-      this.updateStatus('Ready !')
+      this.updateStatus('Connected')
     },
 
     updateStatus: function (status) {
@@ -54,7 +49,9 @@ export default {
   },
 
   mounted () {
-    this.load()
+    // this.load()
+    // window.web3.eth.getAccounts()
+    //   .then(e => console.log(e))
   },
 
   components: {
