@@ -42,3 +42,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+article {
+    margin-right: 40px;
+}
+</style>

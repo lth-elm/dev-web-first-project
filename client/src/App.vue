@@ -201,7 +201,6 @@ article, aside {
 }
 
 article {
-    margin-right: 40px;
     flex: 3;
 }
 

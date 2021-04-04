@@ -19,9 +19,14 @@
                 <br>
                 <h3>Contrat : &nbsp; {{ SFACcontractName }} ({{ SFACsymbol }})</h3>
                 <p>Supply totale : {{ SFACtotalSupply }} </p>
-                <button v-on:click="claimToken();" class="tokenButton">Réclamer un token</button>
-                <input v-model="SFACtokenID" type="text" placeholder="token Id">
-                <button v-on:click="getSFACMetadatas();" class="metaButton">Obtenir les métadatas</button>
+                <div class="token">
+                  <button v-on:click="claimToken();" class="tokenButton">Réclamer un token</button>
+                  <input v-model="SFACtokenID" type="text" placeholder="token Id">
+                  <button v-on:click="getSFACMetadatas();" class="metaButton">Obtenir les métadatas</button>
+                </div>
+                <div v-if="SFACname" class="songForACityMetadatas">
+                  hohoho
+                </div>
             </div>
             <div v-if="noweb3">
                 <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank"><img src="https://www.french-ico.com/wp-content/uploads/2020/11/metamask-2-1.png" alt="Logo Metamask" /></a>
@@ -191,5 +196,19 @@ input {
 
 .metaButton {
   margin-left: 25px;
+}
+
+.token {
+  display: inline-block;
+  text-align: center;
+}
+
+.songForACityMetadatas {
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  border: solid black 0.5px;
+  border-radius: 10px;
 }
 </style>

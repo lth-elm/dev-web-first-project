@@ -217,6 +217,10 @@ export default {
 </script>
 
 <style scoped>
+article {
+    margin-right: 40px;
+}
+
 .styled-table {
     margin-left: 30px;
     margin-bottom: 15px;
