@@ -18,7 +18,7 @@
                 <br>
                 <br>
                 <h3>Contrat : &nbsp; {{ SFACcontractName }} ({{ SFACsymbol }})</h3>
-                <p>Supply totale : {{ SFACtotalSupply - 1 }} </p>
+                <p>Supply totale : {{ SFACtotalSupply }} </p>
                 <button v-on:click="claimToken();" class="tokenButton">Réclamer un token</button>
                 <input v-model="SFACtokenID" type="text" placeholder="token Id">
                 <button v-on:click="getSFACMetadatas();" class="metaButton">Obtenir les métadatas</button>
