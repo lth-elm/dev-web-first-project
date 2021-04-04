@@ -2,6 +2,7 @@ const express = require('express')
 
 const langagesinfoRoutes = require('./langagesinfo-routes.js')
 const currenciesRoutes = require('./currencies-routes.js')
+const tokenURIRoutes = require('./tokenuri-routes.js')
 const authRoutes = require('./auth-routes.js')
 const userRoutes = require('./user-routes.js')
 
@@ -13,6 +14,7 @@ router.use('/user', userRoutes)
 router.use('/auth', authRoutes)
 router.use('/langagesinfo', langagesinfoRoutes)
 router.use('/currencies', currenciesRoutes)
+router.use('/tokenuri', tokenURIRoutes)
 
 router.get('/me', verifyToken, (req, res) => {
   res.json({
