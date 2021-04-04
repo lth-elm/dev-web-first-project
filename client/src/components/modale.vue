@@ -1,4 +1,5 @@
 <template>
+<div>
     <div class="bloc-modale" v-if="revele">
         <div v-on:click="toggleModale" class="overlay"></div>
         <div class="modale">
@@ -8,6 +9,7 @@
         </div>
     </div>
     <p class="danger"><i><b>Attention</b></i> : la réponse affichera les résultats des deux devinettes !</p>
+</div>
 </template>
 
 <script>
@@ -18,7 +20,6 @@ export default {
     return {
       devi1: 'Nikola Tesla',
       devi2: 'Carl Friedrich Gauss'
-
     }
   }
 }
