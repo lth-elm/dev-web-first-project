@@ -24,9 +24,13 @@
                   <input v-model="SFACtokenID" type="text" placeholder="token Id">
                   <button v-on:click="getSFACMetadatas();" class="metaButton">Obtenir les métadatas</button>
                 </div>
-                <div v-if="SFACname" class="songForACityMetadatas">
-                  hohoho
-                </div>
+            </div>
+            <div v-if="SFACname" class="songForACityMetadatas">
+              <img :src="SFACimage" alt="Song For A City token image" class="tokenImage"/>
+              <div class="tokenDescription">
+                <p><b><i>{{ SFACname }}</i></b></p>
+                <p>{{ SFACdescription }}</p>
+              </div>
             </div>
             <div v-if="noweb3">
                 <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank"><img src="https://www.french-ico.com/wp-content/uploads/2020/11/metamask-2-1.png" alt="Logo Metamask" /></a>
@@ -190,6 +194,10 @@ input {
   height: 30px;
 }
 
+h3 {
+  text-align: center;
+}
+
 .tokenButton {
   margin-right: 25px;
 }
@@ -204,11 +212,27 @@ input {
 }
 
 .songForACityMetadatas {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 70%;
   text-align: center;
-  margin-top: 30px;
-  padding: 20px;
-  border: solid black 0.5px;
-  border-radius: 10px;
+  margin-top: 35px;
+  /* padding: 30px; */
+  background-color: rgb(255, 224, 183);
+  border: solid 0.5px #888888;
+  /* border-radius: 10px; */
+  /* box-shadow: 5px 5px #9b9b9b; */
+}
+
+.tokenImage {
+  width: 30%;
+  height: 30%;
+}
+
+.tokenDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 </style>
