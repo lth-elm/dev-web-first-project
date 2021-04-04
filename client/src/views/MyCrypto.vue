@@ -16,13 +16,19 @@
                 <p>Chain Id : {{ chainId }}</p>
                 <p>Dernier bloc : {{ lastBlock }}</p>
                 <br>
+                <div class="toutDoucement">
+                  <h3>Acheter un token de : "Tout Doucement"</h3>
+                  <input v-model="amount" type="text" placeholder="> 0.1 Ether">
+                  <button v-on:click="buyToutDoucement();" class="acheter">Acheter</button>
+                </div>
+                <br>
                 <br>
                 <h3>Contrat : &nbsp; {{ SFACcontractName }} ({{ SFACsymbol }})</h3>
                 <p>Supply totale : {{ SFACtotalSupply }} </p>
                 <div class="token">
                   <button v-on:click="claimToken();" class="tokenButton">Réclamer un token</button>
                   <input v-model="SFACtokenID" type="text" placeholder="token Id">
-                  <button v-on:click="getSFACMetadatas();" class="metaButton">Obtenir les métadatas</button>
+                  <button v-on:click="getSFACMetadatas();" class="metaButton">Obtenir les metadatas</button>
                 </div>
             </div>
             <div v-if="SFACname" class="songForACityMetadatas">
@@ -46,6 +52,7 @@
 <script>
 import Foot from '../components/foot.vue'
 import { abiSFAC } from '../abi/AbiSFAC'
+import { abiTOUDOU } from '../abi/AbiTOUDOU'
 import Web3 from '../../node_modules/web3/dist/web3.min.js'
 // const Web3 = require('web3')
 export default {
@@ -66,7 +73,9 @@ export default {
       SFACtokenURI: undefined,
       SFACdescription: undefined,
       SFACimage: undefined,
-      SFACname: undefined
+      SFACname: undefined,
+      TOUDOUcontract: undefined,
+      amount: undefined
     }
   },
 
@@ -76,6 +85,8 @@ export default {
       window.contract = await this.loadSongForACity()
       this.SFACcontract = window.contract
       this.getSFACDatas()
+      window.contract = await this.loadToutDoucement()
+      this.TOUDOUcontract = window.contract
     },
 
     loadWeb3: async function () {
@@ -124,6 +135,10 @@ export default {
       return await new this.web3.eth.Contract(abiSFAC, '0x004a84209a0021b8ff182ffd8bb874c53f65e90e')
     },
 
+    loadToutDoucement: async function () {
+      return await new this.web3.eth.Contract(abiTOUDOU, '0x89150a0325ecc830a2304a44de98551051b4f466')
+    },
+
     getSFACDatas: function () {
       this.SFACcontract.methods.name().call().then(e => {
         console.log(e)
@@ -168,6 +183,12 @@ export default {
 
     claimToken: function () {
       this.SFACcontract.methods.claimAToken().send({ from: this.address })
+    },
+
+    buyToutDoucement: function () {
+      const wei = this.amount * 1000000000000000000 // conversion ether -> wei
+      console.log(this.amount, ' ether -> ', wei, ' wei')
+      this.TOUDOUcontract.methods.buyAToken().send({ from: this.address, value: wei })
     }
   },
 
@@ -192,6 +213,20 @@ input {
   width: 25%;
   text-align: center;
   height: 30px;
+  border-radius: 15px;
+}
+
+.toutDoucement {
+  text-align: center;
+}
+
+.acheter {
+  background-color: rgb(194, 6, 0);
+  color: #fff;
+  margin-left: 15px;
+}
+.acheter:hover {
+  background-color: rgb(129, 6, 0);
 }
 
 h3 {
