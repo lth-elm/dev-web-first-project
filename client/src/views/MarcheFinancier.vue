@@ -88,7 +88,7 @@ export default {
   width: 45%;
   margin: 1em;
   padding: 1em;
-  border: solid black
+  border: solid black;
 }
 
 .currency >p {
