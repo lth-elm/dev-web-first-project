@@ -36,7 +36,7 @@
               <div class="tokenDescription">
                 <p><b><i>{{ SFACname }}</i></b></p>
                 <p>{{ SFACdescription }}</p>
-                <p><i>L'image peut ne pas se charger en ligne étant donné que la connection au serveur n'est pas sécurisée : http (vs https).<i></p>
+                <p><i>L'image peut ne pas se charger en ligne étant donné que la connection au serveur n'est pas sécurisée : http (vs https).</i></p>
               </div>
             </div>
             <div v-if="noweb3">
