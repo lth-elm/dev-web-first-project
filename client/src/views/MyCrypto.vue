@@ -32,10 +32,11 @@
                 </div>
             </div>
             <div v-if="SFACname" class="songForACityMetadatas">
-              <img :src="SFACimage" alt="Song For A City token image" class="tokenImage"/>
+              <img :src="SFACimage" :alt="SFACimage" class="tokenImage"/>
               <div class="tokenDescription">
                 <p><b><i>{{ SFACname }}</i></b></p>
                 <p>{{ SFACdescription }}</p>
+                <p><i>L'image peut ne pas se charger en ligne étant donné que la connection au serveur n'est pas sécurisée : http (vs https).<i></p>
               </div>
             </div>
             <div v-if="noweb3">
