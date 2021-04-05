@@ -45,7 +45,7 @@
 
 <script>
 import Foot from '../components/foot.vue'
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   name: 'MarcheFinancier',
 
@@ -66,8 +66,13 @@ export default {
   },
 
   mounted () {
-    axios.get('http://api.marketstack.com/v1/eod/latest?access_key=490d5c6512308165c3ff386acb13ac1b&symbols=AAPL,TSLA,MSFT,AAL,AAXN,MAT,OPT,OXFD,PZZA')
-      .then(response => (this.info = response.data.data))
+    fetch('/api/v1/marketstack')
+      .then(res => res.json())
+      .then(res => {
+        console.log('MarketStack ', res)
+        this.info = res.datas.data
+      })
+      .catch(err => { throw err })
   },
 
   components: {
